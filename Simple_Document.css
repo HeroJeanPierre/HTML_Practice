@@ -1,10 +1,30 @@
-body{padding-left: 20px;}	
-h2 {color: #995544;}
-p {
-	padding: 0px;
+body{
+	background-color: #1A1A1A;
+	padding-left: 20px;
+}	
+
+h1, h2, h3, h4, h5, h6 {
+	color: #AA7138;
 }
-table, td, th{
-	border: 1px solid black;
+
+p , pre, blockquote, cite, bdo{
+	color: #B9AB78;
+	/*padding: 0px;*/
+}
+
+a:link, a:active, a:visited, a:hover{ 
+	color: #B9AB78;
+}
+
+th{
+	color: #AA7138;
+	border: 1px solid #AA7138;
+	border-collapse: collapse;
+}
+
+table, td{
+	color: #B9AB78;
+	border: 1px solid #AA7138;
 	border-collapse: collapse;
 	width: 25%
 }
@@ -17,6 +37,20 @@ th {
 	color: blacks;
 	text-align: left;
 }
+
+ul {
+	color: #B9AB78;
+}
+hr {
+    border-color: #3F2A14;
+    -shadow: white;
+/*    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0; 
+*/}
 
 ul.circles{
 	list-style-type: circle;
@@ -55,4 +89,18 @@ li.menu a{
 /*When the mouse is hovered overthe hyperlink, change colors*/
 li.menu a:hover{
 	background-color: #111111
+}
+
+div.dark{
+	border-radius: 25px;
+	margin: 20px 0 20px 0;
+	background-color: #3F2A14;
+	padding: 20px
+}
+
+iframe {
+	height: 500px;
+	width: 80%;
+	border: 10px solid #AA7138;
+	border-radius: 25px;
 }
