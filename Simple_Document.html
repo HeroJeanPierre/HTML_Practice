@@ -1,246 +1,274 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Julien's Page</title>	
+	<title>Julien's Page</title>
+
 	<link rel="stylesheet" type="text/css" href="Simple_Document.css">
+
+	<meta name="description" content="Page that describes html">
+	<meta name="author" content="Julien Jean-Pierre">
+ 	<meta name="keywords" content="HTML, Learning, JavaScript">
+ 	<!-- Set the web page to display properly on all devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Refresh every 30 seconds -->
+	<!-- <meta name="refresh" content=".1"> -->
 </head>
-<div style="text-align: center">
 	<!-- TITLE OF DOC -->
-	<h1>Hello and Welcome to a Demonstration of HTML5</h1>
-	<p>By <a href="github.com/herojeanpierre">Julien Jean-Pierre</a></p>
+<div style="width: 100%">	
+<header class="demo">	<h1 style="margin-bottom: 3px">Hello and Welcome to a Demonstration of HTML5</h1>
+	<p style="margin-top: 0px"><small>This page should get better further down as I learn more.</small></p>
+	<p>By: <a href="github.com/herojeanpierre">Julien Jean-Pierre</a></p>
+</header>
 </div>
-
-<hr>
-<h2>Navigation</h2>
-
-<p>Where would you like to go?</p>
-<ul>
-	<li><a href="#Part_1">Part 1: Tags</a></li>
-	<li><a href="#Part_2">Part 2: Styles</a></li>
-	<li><a href="#Part_3">Part 3: Text Formatting</a></li>
-	<li><a href="#Part_4">Part 4: CSS</a></li>
-	<li><a href="#Part_5">Part 5: Tables</a></li>
-	<li><a href="#Part_6">Part 6: Lists</a></li>
-	<li><a href="#Part_7">Part 7: Blocks (div)</a></li>
-</ul>
-
-
-
-	<hr> 
-	<h2 id="Part_1">Part 1: Tags</h2>
-	<p>So there area  bunch of different things called tags, for example. I am currently using the paragraph tag. anther type of tag is the pre tag, it is good for writing
-	code and will mark all the the spacing changes and new lines, unlike the p tag. Here is an example
-	<blockquote>
-		<pre>
-from statistics import mean
-import numpy as np
-import matplotlib.pyplot as plt
-import random
-
-# xs = np.array([1, 2, 3, 4, 5, 6], dtype=np.float64)
-# ys = np.array([5, 4, 6, 5, 6, 7], dtype=np.float64)
-
-# This will be used to create random data sets
-def create_dataset(size, varience, step=2, correlation=False):
-    val = 0
-    ys = []
-
-    # Assign random values to the ys list
-    for i in range(size):
-        y = val + random.randrange(-varience, varience)
-        ys.append(y)
-
-        if correlation and correlation == 'pos':
-            val += step
-        elif correlation and correlation == 'neg':
-            val -= step
-
-    xs = [i for i in range(len(ys))]
-
-    return np.array(xs, dtype=np.float64), np.array(ys, dtype=np.float64)
-
-
-def best_fit_slope_and_intercept(xs, ys):
-    m = (((mean(xs) * mean(ys)) - mean(xs * ys)) /
-         (mean(xs) * mean(xs) - mean(xs * xs)))
-
-    b = mean(ys) - m * mean(xs)
-    return m, b
-
-
-def squared_error(ys_orig, ys_line):
-    return sum((ys_line - ys_orig) ** 2)
-
-
-# This is meant to tell us how good of a fit the line
-# We made is
-def coefficient_of_determination(ys_orig, ys_line):
-    y_mean_line = [mean(ys_orig) for y in ys_orig]
-    squared_error_regr = squared_error(ys_orig, ys_line)
-    squared_error_y_mean = squared_error(ys_orig, y_mean_line)
-
-    return 1 - (squared_error_regr / squared_error_y_mean)
-
-# Create our data set
-xs, ys = create_dataset(1000, 100, 2, correlation='pos')
-
-# Make the line of best fit
-m, b = best_fit_slope_and_intercept(xs, ys)
-regression_line = []
-
-for x in xs:
-    regression_line.append((m * x) + b)
-
-# This is how we know how good of a fit the line actually is
-r_squared = coefficient_of_determination(ys, regression_line)
-print(r_squared)
-
-# Show the graph
-plt.scatter(xs, ys, s=10)
-plt.plot(xs, regression_line)
-plt.show()
-		</pre>
-	</blockquote>
-	</p>
-	<p>As you can see it holds up all the formatting changes</p>
-	<!--PART 2 -->
+<!-- Is there a better way to do this? -->
+<div class="body">
 	<hr>
-	<h2 id="Part_2">Part 2: Styles</h2>
-		<p>This is an important subject as it controls how things look within tags, 
-		but eventually we will use CSS because it leads to more continuity in design.</p>
+	<h2>Navigation</h2>
 
-		<!-- Color -->Y
-		<p>As you can see I have already added a style to the body. It is greenish.</p>
-		<p>Say I want to make different items in this sentence different <a style="color: red">colors.</a></p>
+	<p>Where would you like to go?</p>
+	<ul>
+		<li><a href="#Part_1">Part 1: Tags</a></li>
+		<li><a href="#Part_2">Part 2: Styles</a></li>
+		<li><a href="#Part_3">Part 3: Text Formatting</a></li>
+		<li><a href="#Part_4">Part 4: CSS</a></li>
+		<li><a href="#Part_5">Part 5: Tables</a></li>
+		<li><a href="#Part_6">Part 6: Lists</a></li>
+		<li><a href="#Part_7">Part 7: Blocks (div)</a></li>
+		<li><a href="#Part_8">Part 8:IFrames</a></li>
+		<li><a href="#Part_9">Part 9:JavaScript</a></li>
+		<li><a href="#Part_10">Part 10:Layout</a></li>
+	</ul>
 
-		<!-- Font -->
-		<p style="font: courier">Or if I want to change the font family.</p>
-		<div></div>
 
-		<!-- Alignment  -->
-		<div></div>
-		<h3 style="text-align: center">The is a centered heading.</h3>
-		<h3 style="text-align: right">This is a right aligned headings.</h3>
-		<div style="text-align: center;">
-			<pre style="text-align: left">
-			 I like to eat a lot
-			 	but a lot of times it is gross
-			 		so I just don't eat anymore...
+
+		<hr>
+		<h2 id="Part_1">Part 1: Tags</h2>
+		<p>So there area  bunch of different things called tags, for example. I am currently using the paragraph tag. anther type of tag is the pre tag, it is good for writing
+		code and will mark all the the spacing changes and new lines, unlike the p tag. Here is an example
+		<blockquote>
+			<pre>
+	from statistics import mean
+	import numpy as np
+	import matplotlib.pyplot as plt
+	import random
+
+	# xs = np.array([1, 2, 3, 4, 5, 6], dtype=np.float64)
+	# ys = np.array([5, 4, 6, 5, 6, 7], dtype=np.float64)
+
+	# This will be used to create random data sets
+	def create_dataset(size, varience, step=2, correlation=False):
+	    val = 0
+	    ys = []
+
+	    # Assign random values to the ys list
+	    for i in range(size):
+	        y = val + random.randrange(-varience, varience)
+	        ys.append(y)
+
+	        if correlation and correlation == 'pos':
+	            val += step
+	        elif correlation and correlation == 'neg':
+	            val -= step
+
+	    xs = [i for i in range(len(ys))]
+
+	    return np.array(xs, dtype=np.float64), np.array(ys, dtype=np.float64)
+
+
+	def best_fit_slope_and_intercept(xs, ys):
+	    m = (((mean(xs) * mean(ys)) - mean(xs * ys)) /
+	         (mean(xs) * mean(xs) - mean(xs * xs)))
+
+	    b = mean(ys) - m * mean(xs)
+	    return m, b
+
+
+	def squared_error(ys_orig, ys_line):
+	    return sum((ys_line - ys_orig) ** 2)
+
+
+	# This is meant to tell us how good of a fit the line
+	# We made is
+	def coefficient_of_determination(ys_orig, ys_line):
+	    y_mean_line = [mean(ys_orig) for y in ys_orig]
+	    squared_error_regr = squared_error(ys_orig, ys_line)
+	    squared_error_y_mean = squared_error(ys_orig, y_mean_line)
+
+	    return 1 - (squared_error_regr / squared_error_y_mean)
+
+	# Create our data set
+	xs, ys = create_dataset(1000, 100, 2, correlation='pos')
+
+	# Make the line of best fit
+	m, b = best_fit_slope_and_intercept(xs, ys)
+	regression_line = []
+
+	for x in xs:
+	    regression_line.append((m * x) + b)
+
+	# This is how we know how good of a fit the line actually is
+	r_squared = coefficient_of_determination(ys, regression_line)
+	print(r_squared)
+
+	# Show the graph
+	plt.scatter(xs, ys, s=10)
+	plt.plot(xs, regression_line)
+	plt.show()
 			</pre>
-		</div>
-
-	<!-- PART 3 -->
-	<hr>
-	<h2 id="Part_3">Part 3: Text formatting </h2>
-		<p>In this I will demonstrate different types of text formatting using these tagnames...</p>
-		<p>
-		This is <b>bold.</b><br>
-		This is <strong>strong.</strong><br>
-
-		This is <i>italics.</i><br>
-		This is <em>emphasized.</em><br>
-		This is <mark>marked.</mark><br>
-		This is <ins>inserted. (Aka underlined)</ins><br>
-		This is E<sup>2</sup><br>
-		This isl J<sub>2</sub><br>
-		This is <small>small.</small><br>
-		This is <del>deleted.</del><br>
+		</blockquote>
 		</p>
+		<p>As you can see it holds up all the formatting changes</p>
+		<!--PART 2 -->
+		<hr>
+		<h2 id="Part_2">Part 2: Styles</h2>
+			<p>This is an important subject as it controls how things look within tags,
+			but eventually we will use CSS because it leads to more continuity in design.</p>
 
-		<p>If I am talking about someone else and I want to mention a quote that they said I will just use, Timmy said:
-		<blockquote cite="www.cnn.com">
-		am really hungry, and I wish that I had food that I could eat right now
-		am really hungry, and I wish that I had food that I could eat right now
-		am really hungry, and I wish that I had food that I could eat right now
-		am really hungry, and I wish that I had food that I could eat right now </blockquote>
-		</p>
-		<p>That was said by him...</p>
+			<!-- Color -->Y
+			<p>As you can see I have already added a style to the body. It is greenish.</p>
+			<p>Say I want to make different items in this sentence different <a style="color: red">colors.</a></p>
 
-		<p> I am the <abbr title="Most Valuable Player">MVP</abbr></p>
-		<cite>Heroes The Movie</cite>
+			<!-- Font -->
+			<p style="font: courier">Or if I want to change the font family.</p>
+			<div></div>
 
-		<bdo dir="ltr rtl">This is right to left.</bdo>;
-	<!-- PART 4 -->
-	<hr>
-	<h2 id="Part_4">Part 4: CSS</h2>
-		<p>If you want to see the next part go to the next <a href="css.html" target="_blank">section</a></p>
+			<!-- Alignment  -->
+			<div></div>
+			<h3 style="text-align: center">The is a centered heading.</h3>
+			<h3 style="text-align: right">This is a right aligned headings.</h3>
+			<div style="text-align: center;">
+				<pre style="text-align: left">
+				 I like to eat a lot
+				 	but a lot of times it is gross
+				 		so I just don't eat anymore...
+				</pre>
+			</div>
 
-	<!-- PART 5 -->
- 	<hr>
-	<h2 id="Part_5">Part 5: Tables</h2>
-		<p>Here is where I will create some tables, nothing to complicated.</p>
-			<table>
-				<p>This is a table listing the residence of a nursing home.</p>
-				<th>ID</th>
-				<th>Name</th>
-				<th colspan="2">Age</th>
+		<!-- PART 3 -->
+		<hr>
+		<h2 id="Part_3">Part 3: Text formatting </h2>
+			<p>In this I will demonstrate different types of text formatting using these tagnames...</p>
+			<p>
+			This is <b>bold.</b><br>
+			This is <strong>strong.</strong><br>
 
-				<tr>
-					<td>74730</td>
-					<td>Joella</td>
-					<td>38</td>					
-					<td>34</td>					
-				</tr>
+			This is <i>italics.</i><br>
+			This is <em>emphasized.</em><br>
+			This is <mark>marked.</mark><br>
+			This is <ins>inserted. (Aka underlined)</ins><br>
+			This is E<sup>2</sup><br>
+			This isl J<sub>2</sub><br>
+			This is <small>small.</small><br>
+			This is <del>deleted.</del><br>
+			</p>
 
-				<tr>
-					<td>38693</td>
-					<td>Theresa</td>
-					<td>38</td>					
-					<td>53</td>					
-				</tr>
-				<tr>
-					<td>18547</td>
-					<td>Belia</td>
-					<td>25</td>					
-					<td>26</td>					
-				</tr>
-				<tr>
-					<td>9792099</td>
-					<td>Valentine</td>
-					<td>69</td>					
-					<td>19</td>					
-				</tr>
-				<tr>
-					<td>5346695</td>
-					<td>Drew</td>
-					<td>47</td>					
-					<td>84</td>					
-				</tr>
-				<tr>
-					<td>9562241</td>
-					<td>Hermina</td>
-					<td>63</td>					
-					<td>20</td>					
-				</tr>
-				<tr>
-					<td>235658</td>
-					<td>Bev</td>
-					<td>51</td>					
-					<td>60</td>					
-				</tr>
-			</table>
+			<p>If I am talking about someone else and I want to mention a quote that they said I will just use, Timmy said:
+			<blockquote cite="www.cnn.com">
+			am really hungry, and I wish that I had food that I could eat right now
+			am really hungry, and I wish that I had food that I could eat right now
+			am really hungry, and I wish that I had food that I could eat right now
+			am really hungry, and I wish that I had food that I could eat right now </blockquote>
+			</p>
+			<p>That was said by him...</p>
 
-			<br>
+			<p> I am the <abbr title="Most Valuable Player">MVP</abbr></p>
+			<cite>Heroes The Movie</cite>
 
-			<table>
-				<tr>
-					<th>Name:</th>
-					<td>Josh</td>
-				</tr>
-				<tr>
-					<th rowspan="2">Numbers:</th>
-					<td>1231231234</td>
-				</tr>
+			<bdo dir="ltr rtl">This is right to left.</bdo>;
+		<!-- PART 4 -->
+		<hr>
+		<h2 id="Part_4">Part 4: CSS</h2>
+			<p>If you want to see the next part go to the next <a href="css.html" target="_blank">section</a></p>
 
-				<tr><td>123123321123</td></tr>
-			</table>
+		<!-- PART 5 -->
+	 	<hr>
+		<h2 id="Part_5">Part 5: Tables</h2>
+			<p>Here is where I will create some tables, nothing to complicated.</p>
+				<table>
+					<p>This is a table listing the residence of a nursing home.</p>
+					<th>ID</th>
+					<th>Name</th>
+					<th colspan="2">Age</th>
 
-			<!-- PART 6 -->
-			<h2 id="Part_6">Part 6: Lists</h2>
+					<tr>
+						<td>74730</td>
+						<td>Joella</td>
+						<td>38</td>
+						<td>34</td>
+					</tr>
 
-			<p>There are two things that we can have, an unordered list:
+					<tr>
+						<td>38693</td>
+						<td>Theresa</td>
+						<td>38</td>
+						<td>53</td>
+					</tr>
+					<tr>
+						<td>18547</td>
+						<td>Belia</td>
+						<td>25</td>
+						<td>26</td>
+					</tr>
+					<tr>
+						<td>9792099</td>
+						<td>Valentine</td>
+						<td>69</td>
+						<td>19</td>
+					</tr>
+					<tr>
+						<td>5346695</td>
+						<td>Drew</td>
+						<td>47</td>
+						<td>84</td>
+					</tr>
+					<tr>
+						<td>9562241</td>
+						<td>Hermina</td>
+						<td>63</td>
+						<td>20</td>
+					</tr>
+					<tr>
+						<td>235658</td>
+						<td>Bev</td>
+						<td>51</td>
+						<td>60</td>
+					</tr>
+				</table>
+
+				<br>
+
+				<table>
+					<tr>
+						<th>Name:</th>
+						<td>Josh</td>
+					</tr>
+					<tr>
+						<th rowspan="2">Numbers:</th>
+						<td>1231231234</td>
+					</tr>
+
+					<tr><td>123123321123</td></tr>
+				</table>
+
+				<!-- PART 6 -->
+				<h2 id="Part_6">Part 6: Lists</h2>
+
+				<p>There are two things that we can have, an unordered list:
+					<blockquote>
+						<ul>
+							<li>Tina</li>
+							<li>Rosario</li>
+							<li>Refugia</li>
+							<li>Gwyn</li>
+							<li>Fae</li>
+							<li>Lauralee</li>
+							<li>Elidia</li>
+						</ul>
+					</blockquote>
+					<p>This list can have different types of blocks to show them off circles:</p>
 				<blockquote>
-					<ul>
+					<ul class="circles">
 						<li>Tina</li>
 						<li>Rosario</li>
 						<li>Refugia</li>
@@ -250,147 +278,183 @@ plt.show()
 						<li>Elidia</li>
 					</ul>
 				</blockquote>
-				<p>This list can have different types of blocks to show them off circles:</p>
-			<blockquote>
-				<ul class="circles">
-					<li>Tina</li>
-					<li>Rosario</li>
-					<li>Refugia</li>
-					<li>Gwyn</li>
-					<li>Fae</li>
-					<li>Lauralee</li>
-					<li>Elidia</li>
-				</ul>
-			</blockquote>
-			<p>Squares:</p>
-			<blockquote>
-				<ul class="squares">
-					<li>Tina</li>
-					<li>Rosario</li>
-					<li>Refugia</li>
-					<li>Gwyn</li>
-					<li>Fae</li>
-					<li>Lauralee</li>
-					<li>Elidia</li>
-				</ul>
-			</blockquote>
-
-			<p>Or None:</p>
-			<blockquote>
-				<ul class="none">
-					<li>Tina</li>
-					<li>Rosario</li>
-					<li>Refugia</li>
-					<li>Gwyn</li>
-					<li>Fae</li>
-					<li>Lauralee</li>
-					<li>Elidia</li>
-				</ul>
-			</blockquote>
-			</p>
-
-			<p>The second kind of list is ordered list:
-			<blockquote>
-				<ol class="none">
-					<li>Tina</li>
-					<li>Rosario</li>
-					<li>Refugia</li>
-					<li>Gwyn</li>
-					<li>Fae</li>
-					<li>Lauralee</li>
-					<li>Elidia</li>
-				</ol>
-			</blockquote>
-			</p>
-
-			<p>Then there is nested lists:
-			<blockquote>
-				<ul>
-					<li>Laurena</li>
-					<ul>
-						<li>Abair</li>
-						<li>Mctee</li>
-						<li>Litwin</li>
-						<li>Bordi</li>
+				<p>Squares:</p>
+				<blockquote>
+					<ul class="squares">
+						<li>Tina</li>
+						<li>Rosario</li>
+						<li>Refugia</li>
+						<li>Gwyn</li>
+						<li>Fae</li>
+						<li>Lauralee</li>
+						<li>Elidia</li>
 					</ul>
-					<li>Jess</li>
-					<ul>
-						<li>Goldbeck</li>
-						<li>Mignone</li>
-						<li>Paik</li>
-						<li>Sadoski</li>
+				</blockquote>
+
+				<p>Or None:</p>
+				<blockquote>
+					<ul class="none">
+						<li>Tina</li>
+						<li>Rosario</li>
+						<li>Refugia</li>
+						<li>Gwyn</li>
+						<li>Fae</li>
+						<li>Lauralee</li>
+						<li>Elidia</li>
 					</ul>
-					<li>Maxine</li>
+				</blockquote>
+				</p>
+
+				<p>The second kind of list is ordered list:
+				<blockquote>
+					<ol class="none">
+						<li>Tina</li>
+						<li>Rosario</li>
+						<li>Refugia</li>
+						<li>Gwyn</li>
+						<li>Fae</li>
+						<li>Lauralee</li>
+						<li>Elidia</li>
+					</ol>
+				</blockquote>
+				</p>
+
+				<p>Then there is nested lists:
+				<blockquote>
 					<ul>
-						<li>Pollo</li>
-						<li>Pisco</li>
-						<li>Emard</li>
-						<li>Mirabelli</li>
+						<li>Laurena</li>
+						<ul>
+							<li>Abair</li>
+							<li>Mctee</li>
+							<li>Litwin</li>
+							<li>Bordi</li>
+						</ul>
+						<li>Jess</li>
+						<ul>
+							<li>Goldbeck</li>
+							<li>Mignone</li>
+							<li>Paik</li>
+							<li>Sadoski</li>
+						</ul>
+						<li>Maxine</li>
+						<ul>
+							<li>Pollo</li>
+							<li>Pisco</li>
+							<li>Emard</li>
+							<li>Mirabelli</li>
+						</ul>
+						<li>Linette</li>
+						<ul>
+							<li>Rau</li>
+							<li>Laib</li>
+							<li>Nuon</li>
+							<li>Schlieter</li>
+						</ul>
 					</ul>
-					<li>Linette</li>
-					<ul>
-						<li>Rau</li>
-						<li>Laib</li>
-						<li>Nuon</li>
-						<li>Schlieter</li>
-					</ul>
+				</blockquote>
+				</p>
+				<br>
+				<p>Then we have the notorious horizontal list... the thing that makes it a horizontal list is setting the list to float left. I initially thought it was </p>
+
+				<ul class="menu">
+					<li class="menu"><a href="#Home">Home</a></li>
+					<li class="menu"><a href="#About">About</a></li>
+					<li class="menu"><a href="#Blog">Blog</a></li>
+					<li class="menu"><a href="#FAQ">FAQ</a></li>
 				</ul>
-			</blockquote>
-			</p>
-			<br>
-			<p>Then we have the notorious horizontal list... the thing that makes it a horizontal list is setting the list to float left. I initially thought it was </p>
 
-			<ul class="menu">
-				<li class="menu"><a href="#Home">Home</a></li>
-				<li class="menu"><a href="#About">About</a></li>
-				<li class="menu"><a href="#Blog">Blog</a></li>
-				<li class="menu"><a href="#FAQ">FAQ</a></li>
-			</ul>
+			<!-- PART 7 -->
+			<hr>
+			<h2 id="Part_7"	>Part 7: Blocks (div)</h2>
+			<div style="border: 1px solid #AA7138; padding-left: 1%">
+				<h3>This is a <span style="color: #900000">block</span></h3>
+				<p>Blocks span the whole length, for example, this is in a div. They are typically used as containers for HTML content</p>
+			</div>
 
-		<!-- PART 7 -->
-		<hr>
-		<h2 id="Part_7"	>Part 7: Blocks (div)</h2>
-		<div style="border: 1px solid #AA7138; padding-left: 1%">
-			<h3>This is a <span style="color: #900000">block</span></h3>
-			<p>Blocks span the whole length, for example, this is in a div. They are typically used as containers for HTML content</p>
-		</div>
+			<div class="dark">
+			<h2>Lorus Ipsum</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies tellus iaculis odio rhoncus, cursus varius urna faucibus. Maecenas aliquam faucibus quam eu vestibulum. Sed a risus nec elit vulputate ultricies vel id mi. Vivamus eget erat erat. Vestibulum eu sem id est auctor rutrum eget eget nisi. Pellentesque vitae turpis dignissim ex sollicitudin mollis ut et sapien. Nam rutrum lacus neque, eget efficitur tellus tristique at. Sed nec egestas eros. Phasellus commodo odio augue, ac hendrerit nunc efficitur non. Suspendisse potenti. Vestibulum malesuada lorem non elit hendrerit, et vestibulum erat pretium. Nulla nisi turpis, vehicula vitae commodo non, molestie id libero. Aliquam viverra lacus ut egestas gravida. Vestibulum orci turpis, molestie sed risus vel, porta sagittis dui. Praesent placerat, mauris id porta pharetra, orci enim pretium magna, non bibendum sem dui sit amet nisl.</p>
+			</div>
 
-		<div class="dark">
-		<h2>Lorus Ipsum</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies tellus iaculis odio rhoncus, cursus varius urna faucibus. Maecenas aliquam faucibus quam eu vestibulum. Sed a risus nec elit vulputate ultricies vel id mi. Vivamus eget erat erat. Vestibulum eu sem id est auctor rutrum eget eget nisi. Pellentesque vitae turpis dignissim ex sollicitudin mollis ut et sapien. Nam rutrum lacus neque, eget efficitur tellus tristique at. Sed nec egestas eros. Phasellus commodo odio augue, ac hendrerit nunc efficitur non. Suspendisse potenti. Vestibulum malesuada lorem non elit hendrerit, et vestibulum erat pretium. Nulla nisi turpis, vehicula vitae commodo non, molestie id libero. Aliquam viverra lacus ut egestas gravida. Vestibulum orci turpis, molestie sed risus vel, porta sagittis dui. Praesent placerat, mauris id porta pharetra, orci enim pretium magna, non bibendum sem dui sit amet nisl.</p>
-		</div>
+			<div class="dark">
+			<h2>React De Fin</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies tellus iaculis odio rhoncus, cursus varius urna faucibus. Maecenas aliquam faucibus quam eu vestibulum. Sed a risus nec elit vulputate ultricies vel id mi. Vivamus eget erat erat. Vestibulum eu sem id est auctor rutrum eget eget nisi. Pellentesque vitae turpis dignissim ex sollicitudin mollis ut et sapien. Nam rutrum lacus neque, eget efficitur tellus tristique at. Sed nec egestas eros. Phasellus commodo odio augue, ac hendrerit nunc efficitur non. Suspendisse potenti. Vestibulum malesuada lorem non elit hendrerit, et vestibulum erat pretium. Nulla nisi turpis, vehicula vitae commodo non, molestie id libero. Aliquam viverra lacus ut egestas gravida. Vestibulum orci turpis, molestie sed risus vel, porta sagittis dui. Praesent placerat, mauris id porta pharetra, orci enim pretium magna, non bibendum sem dui sit amet nisl.</p>
+			</div>
 
-		<div class="dark">
-		<h2>React De Fin</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies tellus iaculis odio rhoncus, cursus varius urna faucibus. Maecenas aliquam faucibus quam eu vestibulum. Sed a risus nec elit vulputate ultricies vel id mi. Vivamus eget erat erat. Vestibulum eu sem id est auctor rutrum eget eget nisi. Pellentesque vitae turpis dignissim ex sollicitudin mollis ut et sapien. Nam rutrum lacus neque, eget efficitur tellus tristique at. Sed nec egestas eros. Phasellus commodo odio augue, ac hendrerit nunc efficitur non. Suspendisse potenti. Vestibulum malesuada lorem non elit hendrerit, et vestibulum erat pretium. Nulla nisi turpis, vehicula vitae commodo non, molestie id libero. Aliquam viverra lacus ut egestas gravida. Vestibulum orci turpis, molestie sed risus vel, porta sagittis dui. Praesent placerat, mauris id porta pharetra, orci enim pretium magna, non bibendum sem dui sit amet nisl.</p>
-		</div>
+			<div class="dark">
+			<h2>Ignus Piamus</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies tellus iaculis odio rhoncus, cursus varius urna faucibus. Maecenas aliquam faucibus quam eu vestibulum. Sed a risus nec elit vulputate ultricies vel id mi. Vivamus eget erat erat. Vestibulum eu sem id est auctor rutrum eget eget nisi. Pellentesque vitae turpis dignissim ex sollicitudin mollis ut et sapien. Nam rutrum lacus neque, eget efficitur tellus tristique at. Sed nec egestas eros. Phasellus commodo odio augue, ac hendrerit nunc efficitur non. Suspendisse potenti. Vestibulum malesuada lorem non elit hendrerit, et vestibulum erat pretium. Nulla nisi turpis, vehicula vitae commodo non, molestie id libero. Aliquam viverra lacus ut egestas gravida. Vestibulum orci turpis, molestie sed risus vel, porta sagittis dui. Praesent placerat, mauris id porta pharetra, orci enim pretium magna, non bibendum sem dui sit amet nisl.</p>
+			</div>
 
-		<div class="dark">
-		<h2>Ignus Piamus</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies tellus iaculis odio rhoncus, cursus varius urna faucibus. Maecenas aliquam faucibus quam eu vestibulum. Sed a risus nec elit vulputate ultricies vel id mi. Vivamus eget erat erat. Vestibulum eu sem id est auctor rutrum eget eget nisi. Pellentesque vitae turpis dignissim ex sollicitudin mollis ut et sapien. Nam rutrum lacus neque, eget efficitur tellus tristique at. Sed nec egestas eros. Phasellus commodo odio augue, ac hendrerit nunc efficitur non. Suspendisse potenti. Vestibulum malesuada lorem non elit hendrerit, et vestibulum erat pretium. Nulla nisi turpis, vehicula vitae commodo non, molestie id libero. Aliquam viverra lacus ut egestas gravida. Vestibulum orci turpis, molestie sed risus vel, porta sagittis dui. Praesent placerat, mauris id porta pharetra, orci enim pretium magna, non bibendum sem dui sit amet nisl.</p>
-		</div>
+			<!-- PART 8 -->
+			<hr>
+			<h2 id="Part_8">Part 8: IFrames</h2>
 
-		<!-- PART 8 -->
-		<hr>
-		<h2 id="Part_8">Part 8: IFrames</h2>
+			<div class="dark">
+				<p>I am not really sure when I would use this, but it is to but a website into your website. Like one of my all time favorite sites is projecteuler.net, it is a site for programmers to practice there problem solving skills:</p>
 
-		<div class="dark">
-			<p>I am not really sure when I would use this, but it is to but a website into your website. Like one of my all time favorite sites is projecteuler.net, it is a site for programmers to practice there problem solving skills:</p>
-
-			<iframe src="https://projecteuler.net/archives"></iframe>
-		</div>
+				<!-- <iframe src="https://projecteuler.net/archives"></iframe> -->
+			</div>
 
 
-		<!-- PART 9 -->
-		<hr>
-		<h2 id="Part_9">Part 9: JavaScript</h2>
+			<!-- PART 9 -->
+			<hr>
+			<h2 id="Part_9">Part 9: JavaScript</h2>
 
-		<div class="dark">
-			
-		</div>
+			<div class="dark">
+				<p>The thing we have all been waiting for! <span id="right_to_wrong">Right?</span></p>
+				<button type="button" onclick="document.getElementById('right_to_wrong').innerHTML = 'Wrong.'"">Change the text to wrong.</button>
+
+				<p style="font-weight: bold" id="Date"></p>
+				<script type="text/javascript">
+
+					document.getElementById('Date').innerHTML = Date();
+				</script>
+
+				<p>I plan on adding more here, JS is a big topic.</p>
+			</div>
+
+			<!-- PART 10 -->
+			<hr>
+			<h2 id="Part_10">Part 10: Layout</h2>
+
+			<div class="dark">		
+				<p>This will go over the necessary methods of laying out a website. Here as an example.</p>
+
+				<div class="layout">			
+					<header class="demo">
+						<h1>Hello programmers</h1>
+					</header>
+
+					<nav class="demo">
+						<ul>
+							<li><a href="#">Link #1</a></li>
+							<li><a href="#">Link #2</a></li>
+							<li><a href="#">Link #3</a></li>
+							<li><a href="#">Link #4</a></li>
+							<li><a href="#">Link #5</a></li>
+						</ul>
+					</nav>
+					<div class="demo">					
+
+						<article class="demo">
+							<h2>Good programming practices!</h2>
+							<p>Superior coding techniques and programming practices are hallmarks of a professional programmer. The bulk of programming consists of making a large number of small choices while attempting to solve a larger set of problems. How wisely those choices are made depends largely upon the programmer's skill and expertise.</p>
+						</article>
+					</div>
 
 
+					<footer class="demo">
+						Copyright &copy Julien Jean-Pierre
+					</footer>
+				</div>
 
+				<p>That up there took a little bit of time because I didn't know how to fix a problem where space was showing in between the nav tag and the article tag. However, it was fixed by placing
+				the nav tag into a div container.</p>
 
+				<p>However the way I just did it is the old way of doing it, the new way is to use a flex box. That will align up everything in a predictable way</p>
+
+			</div>
+</div>
 </body>
 </html>

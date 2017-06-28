@@ -1,7 +1,11 @@
 body{
 	background-color: #1A1A1A;
-	padding-left: 20px;
+	/*padding-left: 20px;*/
 }	
+
+div.body {
+	padding-left: 20px;
+}
 
 h1, h2, h3, h4, h5, h6 {
 	color: #AA7138;
@@ -103,4 +107,42 @@ iframe {
 	width: 80%;
 	border: 10px solid #AA7138;
 	border-radius: 25px;
+}
+
+header.demo, footer.demo{
+	padding: 1em;
+	color: #B9AB78;
+	background-color: #111111;
+	/*Clears any overlap from elements*/
+	clear: left, right; 
+	text-align: center;
+}
+div.demo{
+	background-color: #909090;
+}
+nav.demo{
+	float: left;
+	max-width: 160px;
+	margin: 0px;
+	padding: 1em;
+}
+
+nav.demo ul{
+	list-style-type: none;
+	padding: none;
+}
+
+nav.demo a{
+	color: #716849;
+}
+
+article.demo{
+	margin-left: 170px;
+	border-left: 1px solid #111111;
+	padding: 1em;
+	background-color: #909090;
+}
+
+article.demo p{
+	color: #716849;
 }
