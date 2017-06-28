@@ -1,0 +1,58 @@
+body{padding-left: 20px;}	
+h2 {color: #995544;}
+p {
+	padding: 0px;
+}
+table, td, th{
+	border: 1px solid black;
+	border-collapse: collapse;
+	width: 25%
+}
+
+th, td{
+	padding: 5px;
+}
+
+th {
+	color: blacks;
+	text-align: left;
+}
+
+ul.circles{
+	list-style-type: circle;
+}
+
+ul.squares{
+	list-style-type: square;
+}
+ul.none{
+	list-style-type: none;
+}
+
+ul.menu{
+	/*Circles, squares, etc*/
+	list-style-type: none;
+	/*margin: 0;*/
+	padding: 0;
+	overflow: hidden;
+	background-color: #124301;
+}
+
+li.menu{
+	/*This is what makes in horizontal*/
+	float: left;
+}
+
+li.menu a{
+	display: block;
+	color: white;
+	/*text-align: right;*/
+	padding: 16px;
+	/*This gets rid of the underlining and highlight of these hyperlinks*/
+	text-decoration: none;
+}
+
+/*When the mouse is hovered overthe hyperlink, change colors*/
+li.menu a:hover{
+	background-color: #111111
+}
