@@ -1,0 +1,405 @@
+/*This is where I am going to put my local variables*/
+
+:root {
+	--highlight-color: #00EB00;
+	--secondary-highlight-color: #008600;
+	--container-background-color: #1E1E1E;
+	--example-container-background-color: #626262;
+	--secondary-container-background-color: #506450;
+	--border-radius: 10px;
+	--note-color: red;
+	--bg-color: #000000;
+	--text-shadow: black;
+	--nav-color: #E8E800;
+}
+
+body{
+	background-color: var(--bg-color);
+	padding: 1em;
+}
+
+header{
+	text-align: center;
+}
+
+nav{
+
+}
+
+section{
+
+}
+
+footer{
+
+}
+
+hr{
+	border: 2px dashed var(--secondary-container-background-color);
+}
+
+/*Style of headers*/
+h1, h2, h3, h4, h5, h6{
+	color: var(--highlight-color);
+}
+
+/*Color of descriptive text*/
+p, input, blockquote, basefont, li, table, th, td, small{
+	color: white;
+
+}
+
+table, td, th{
+/*	border-left: 1px solid ;
+	border-right: 1px solid grey;
+*/	border-collapse: collapse;
+}
+
+td, th{
+	padding: 1em;
+	text-align: center;
+}
+
+table{
+	margin: 2em auto 2em auto;
+	empty-cells: show;
+}
+
+th{
+	background-color: var(--secondary-highlight-color);
+}
+
+tr:nth-child(even){
+	background-color: #707070
+}
+
+tr:hover{
+	background-color: #909090;
+}
+/*Do you really want to highlight a table header? Ew.*/
+
+/*
+th:hover{
+	background-color: #909090;	
+}
+*/
+a{
+	color: var(--highlight-color);
+}
+
+ul.menu{
+	/*z-index: -1;*/
+	text-align: center;
+	padding: 16px;
+	border-radius: 10px;
+	background-color: var(--secondary-container-background-color);
+}
+
+li.menu{
+	display: inline-block;
+}
+
+li.menu a{
+	background-color: var(--secondary-container-background-color);
+	padding: 16px;
+	text-decoration: none;
+	font-weight: bold;
+	text-shadow: 2px 2px var(--text-shadow);
+}
+
+li.menu a:hover{
+	background-color: var(--bg-color);
+}
+
+li.menu a.active{
+	background-color: white;
+}
+
+div.content_container{
+	padding: 1em;
+	margin: 2em 0em 2em 0em;
+	border-color: var(--highlight-color);
+	border-width: 10px;
+	border-style: none none none solid; /*Left Highlight*/
+	background-color: var(--container-background-color);
+	border-radius: 10px;
+}
+
+div.content_note{
+	padding: 1em;
+	margin: auto;
+	width: 50%;
+	border-color: var(--note-color);
+	border-width: 10px;
+	border-style: none none none solid; /*Left Highlight*/
+	background-color: var(--container-background-color);
+	border-radius: 10px;
+
+}
+
+div.content_note h2, div.content_note h3, div.content_note h4, div.content_note h6,
+div.content_note ul{
+	color: var(--note-color);
+}
+
+div.content_nav{
+	padding: 1em;
+	margin: 2em auto auto auto;
+	width: 25%;
+	text-align: center;
+	border-color: var(--nav-color);
+	border-wkidth: 10px;
+	border-style: none none none solid; /*Left Highlight*/
+	background-color: var(--container-background-color);
+	border-radius: 10px;
+
+}
+
+div.content_nav h2, div.content_nav h3,
+div.content_nav h4, div.content_nav h5,
+div.content_nav h6, div.content_nav h1,
+div.content_nav a, div.content_nav ul{
+	color: var(--nav-color);
+}
+
+div.content_nav ul{
+	text-align: center;
+	margin: 1em 3.5em 1em 1em;
+	font-style: italic;
+	line-height: 1.5em;
+	list-style-type: none;
+}
+
+div.example{
+	width: auto;
+	margin: 1em;
+	padding: 1em 2em 1em 2em;
+	border: 1px solid var(--highlight-color);
+	border-radius: var(--border-radius);
+	background-color: var(--example-container-background-color);
+}
+
+div.example:hover{
+	background-color: #56565 6;
+}
+
+div.example p{
+	text-indent: 3em;
+	text-align: justify;
+}
+
+div.example h3{
+	text-shadow: 2px 2px var(--text-shadow);
+}
+
+/*Could be cool but it looks*/
+/*div.example p::first-letter{
+	color: var(--highlight-color);
+	font-size: xx-large;
+	font-family: serif;
+}*/
+
+
+/*Dashed around*/
+#cool_border_1{
+	padding: 1em;
+	border-color: var(--highlight-color);
+	border-width: 3px;
+	border-style: dashed;
+	border-radius: 10px;
+	background-color: var(--example-container-background-color);
+}
+
+/*Underlined*/
+#cool_border_2{
+	padding: 1em;
+	border-color: var(--highlight-color);
+	border-width: 10px;
+	border-style: none none solid none;
+	border-radius: 10px;
+	background-color: var(--example-container-background-color);
+}
+
+/*Top and bottom solid*/
+#cool_border_3{
+	padding: 1em;
+	border-color: var(--highlight-color);
+	border-width: 10px;
+	border-style: solid none solid none;
+	border-radius: 10px;
+	background-color: var(--example-container-background-color);
+}
+
+#margin_left_1{
+	margin-top: 1em;
+	padding: 1em;
+	margin-left: 0%;
+	border-color: var(--highlight-color);
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 10px;
+	background-color: var(--example-container-background-color);
+}
+
+#margin_left_2{
+	margin-top: 1em;
+	padding: 1em;
+	margin-left: 10%;
+	border-color: var(--highlight-color);
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 10px;
+	background-color: var(--example-container-background-color);
+}
+
+#margin_left_3{
+	margin-top: 1em;
+	padding: 1em;
+	margin-left: 20%;
+	border-color: var(--highlight-color);
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 10px;
+	background-color: var(--example-container-background-color);
+}
+
+#margin_left_4{
+	margin-top: 1em;
+	padding: 1em;
+	margin-left: 30%;
+	border-color: var(--highlight-color);
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 10px;
+	background-color: var(--example-container-background-color);
+}
+
+#margin_auto{
+	margin: auto;
+	margin-top: 1em;
+	width: 50%;
+	padding: 1em;
+	border-color: var(--highlight-color);
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 10px;
+	background-color: var(--example-container-background-color);
+}
+
+#outline_example_1{
+	width: 75%;
+	margin: 3em auto auto auto ;
+	padding: 2em;
+	border: 1px solid var(--highlight-color);
+	outline-style: solid;
+	outline-width: 5px;
+	outline-color: red;
+ }
+
+#text_format_example_1 p{
+	text-indent: 3em;	background-color: var(--example-container-background-color);
+
+	text-align: justify;
+}
+
+#text_format_example_1 h3{
+	text-decoration: underline;
+	text-shadow: 2px 2px var(--text-shadow);
+}
+
+#center_test_1{
+	margin: auto;
+	width:25%;
+	border-style: solid none solid none;
+	border-width: 3em 0 3em 0;
+	border-color: var(--highlight-color);
+	text-align: center;
+	background-color: black;
+}
+
+#center_test_1 h2{
+	text-align: center;
+}
+
+.hovershow{
+	border: 1px solid var(--highlight-color);
+	padding: 2em;
+	border-radius: 10px;
+	background-color: black;
+}
+
+.hovershow p{
+	display: none;
+}
+
+.hovershow:hover p{
+	display: block;
+}
+
+ul.vert_nav{
+	/*position: absolute;*/
+	/*float: left;*/
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 20%;
+	background-color: var(--secondary-container-background-color);
+}
+
+ul.vert_nav li{
+	border-bottom: 1px solid black;
+	text-align: center;
+}
+
+ul.vert_nav a{
+	display: block;
+	color: black;
+	padding: 16px;
+	text-decoration: none;
+}
+
+ul.vert_nav a:hover:not(.active){
+	background-color: white;
+	border-left: 5px solid black;
+	border-right: 5px solid black;
+}
+
+ul.vert_nav a.active{	
+	background-color: var(--highlight-color);
+}
+
+ul.vert_nav_2{
+	list-style-type: none;
+	margin: 1em 0 0 0;
+	padding: 0;
+	width: 50%;
+	background-color: blue;	
+	text-align: center;
+}
+
+ul.vert_nav_2 li{
+	/*position: absolute;*/
+	margin: 0;
+	padding: 0;
+	width: 30%;
+	border-bottom: 1px solid black;
+	text-align: center;
+	/*display: block;*/
+	display: inline-block;
+}
+
+ul.vert_nav_2 a{
+	display:block;
+	/*display: block;*/
+	color: black;
+	padding: 16px;
+	text-decoration: none;
+}
+
+ul.vert_nav_2 a:hover:not(.active){
+	background-color: white;
+	border-left: 5px solid black;
+	border-right: 5px solid black;
+}
+
+

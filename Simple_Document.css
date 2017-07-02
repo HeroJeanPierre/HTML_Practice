@@ -1,10 +1,31 @@
+
 body{
-	background-color: #1A1A1A;
+	background-color: #53371B;
 	/*padding-left: 20px;*/
 }	
 
-div.body {
-	padding-left: 20px;
+ul.header_menu{
+	list-style-type: none;
+	padding: 0;
+	overflow: hidden;
+	background-color: #3F2A14;
+}
+
+li.header_menu{
+	float: center;
+/*	border: 1px solid #111111;
+*/	display: inline-block;
+	padding: 16px;
+}
+
+li.header_menu a{
+	color: white;
+	text-decoration: none;
+	padding: 16px;
+}
+
+li.header_menu a:hover{
+	background-color: #111111;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -15,6 +36,11 @@ p , pre, blockquote, cite, bdo{
 	color: #B9AB78;
 	/*padding: 0px;*/
 }
+
+div.body {
+	padding-left: 20px;
+}
+
 
 a:link, a:active, a:visited, a:hover{ 
 	color: #B9AB78;
@@ -45,9 +71,9 @@ th {
 ul {
 	color: #B9AB78;
 }
+
 hr {
     border-color: #3F2A14;
-    -shadow: white;
 /*    display: block;
     height: 1px;
     border: 0;
@@ -184,4 +210,9 @@ nav.flex{
     nav.flex {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
     article.flex {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
     footer {-webkit-order:3;order:3;}
+}
+
+#map{
+	width: 40%;
+	height 400px
 }
