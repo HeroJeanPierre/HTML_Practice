@@ -21,22 +21,42 @@
 		<nav>
 			<ul class="menu">
 				<li class="menu"><a href="Simple_Document.html">HTML</a></li>
-				<li class="menu"><a href="css_document.html">CSS</a></li>
+				<li class="menu dd">
+					<a class="ddbutton" href="css_document.html">CSS</a>
+					<div class="ddcontent">
+						<a href="#Part_1">Part 1: Borders</a>
+						<a href="#Part_2">Part 2: Margins</a>
+						<a href="#Part_3">Part 3: Box Model</a>
+						<a href="#Part_4">Part 4: Text Formatting</a>
+						<a href="#Part_5">Part 5: Fonts</a>
+						<a href="#Part_6">Part 6: Icons</a>
+						<a href="#Part_7">Part 7: Tables</a>
+					</div>
+				</li>
 				<li class="menu"><a href="javascript_document.html">JavaScript</a></li>
 				<li class="menu"><a href="sql_document.html">SQL</a></li>
 			</ul>
+				<!-- 				<ul>
 			<div class="content_nav">
 				<h2>Navigation</h2>
-				<ul>
-					<li><a href="#Part_1">Part 1: Borders</a></li>
-					<li><a href="#Part_2">Part 2: Margins</a></li>
-					<li><a href="#Part_3">Part 3: Box Model</a></li>
-					<li><a href="#Part_4">Part 4: Text Formatting</a></li>
-					<li><a href="#Part_5">Part 5: Fonts</a></li>
-					<li><a href="#Part_6">Part 6: Icons</a></li>
-					<li><a href="#Part_7">Part 7: Tables</a></li>
-				</ul>
+						<li><a href="#Part_1">Part 1: Borders</a></li>
+						<li><a href="#Part_2">Part 2: Margins</a>k</li>
+						<li><a href="#Part_3">Part 3: Box Model</a></li>
+						<div class="dd">
+											class="ddcontent" 			<a href="#Part_1">Part 1: Borders</a>
+											class="ddcontent" 			<a href="#Part_2">Part 2: Margins</a>
+											class="ddcontent" 			<a href="#Part_3">Part 3: Box Model</a>
+											class="ddcontent" 			<a href="#Part_4">Part 4: Text Formatting</a>
+											class="ddcontent" 			<a href="#Part_5">Part 5: Fonts</a>
+											class="ddcontent" 			<a href="#Part_6">Part 6: Icons</a>
+											class="ddcontent" 			<a href="#Part_7">Part 7: Tables</a>
+						</div>
+						<li><a href="#Part_4">Part 4: Text Formatting</a></li>
+						<li><a href="#Part_5">Part 5: Fonts</a></li>
+						<li><a href="#Part_6">Part 6: Icons</a></li>
+						<li><a href="#Part_7">Part 7: Tables</a></li>
 			</div>
+				</ul> -->
 		</nav>
 		<!-- SECTION -->
 		<section>
@@ -56,7 +76,7 @@
 				<br><hr><br>
 				<div id="cool_border_3">
 					<h3>Lorum Ipsum</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies tellus iaculis odio rhoncus, cursus varius urna faucibus. Maecenas aliquam faucibus quam eu vestibulum. Sed a risus nec elit vulputate ultricies vel id mi. Vivamus eget erat erat. Vestibulum eu sem id est auctor rutrum eget eget nisi. Pellentesque vitae turpis dignissim ex sollicitudin mollis ut et sapien. Nam rutrum lacus neque, eget efficitur tellus tristique at. Sed nec egestas eros. Phasellus commodo odio augue, ac hendrerit nunc efficitur non. Suspendisse potenti. Vestibulum malesuada lorem non elit hendrerit, et vestibulum erat pretium. Nulla nisi turpis, vehicula vitae commodo non, molestie id libero. Aliquam viverra lacus ut egestas gravida. Vestibulum orci turpis, molestie sed risus vel, porta sagittis dui. Praesent placerat, mauris id porta pharetra, orci enim pretium magna, non bibendum sem dui sit amet nisl.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies tellus iaculis odio rhoncus, cursus varius urna faucibus. Maecenas aliquam faucibus quam eu vestibulum. Sed a risus nec elit vulputate ultricies vel id mi. Vivamus eget erat erat. Vestibulum eu sem id est auctor rutrum eget eget nisi. Pellentesque vitae turpis dignissim ex sollicitudin mollis ut et sapien. Nam rutrum lacus neque, eget efficitur tellus tristique at. Sed nec egestas eros. Phasellus commodo odio augue, ac hendrerit nunc efficitur non. Suspendisse potenti. Vestibulum malesuada lorem non elit hendrerit, et vestibulum erat pretium. Nullaj nisi turpis, vehicula vitae commodo non, molestie id libero. Aliquam viverra lacus ut egestas gravida. Vestibulum orci turpis, molestie sed risus vel, porta sagittis dui. Praesent placerat, mauris id porta pharetra, orci enim pretium magna, non bibendum sem dui sit amet nisl.</p>
 				</div>
 			</div>
 			<div class="content_container" id="Part_2">
@@ -298,7 +318,6 @@
 				<ul>
 					<li>Opacity</li>
 				</ul>
-				
 			</div>
 			<div class="content_container" id="Part_11">
 				<h2>Part 11: Navigation Bar</h2>
@@ -308,16 +327,92 @@
 					<li><a href="#About">About</a></li>
 					<li><a href="#About">Blog</a></li>
 				</ul>
-
 				<ul class="vert_nav_2">
 					<li><a href="#About">Home</a></li>
 					<li><a href="#About">About</a></li>
 					<li><a href="#About">Blog</a></li>
 				</ul>
 			</div>
-		</section>
-		<!-- FOOTER -->
-		<footer>
-		</footer>
-	</body>
-</html>
+			<div class="content_container" id="Part_11">
+				<h2>Part 11: Drop Down</h2>
+				<p>So building a dropdown menu just involves intelligently using the hover tool. Kind on like the example above. Let's start by making a drop down button</p>
+				<div class="dropdown" >
+					<button class="dropdown_btn">Drop Down</button>
+					<div class="dropdown_content" style="box-shadow: 0px 5px 19px 0px rgba(200,0,0,.5)">
+						<a href="#Home">Home</a>
+						<a href="#About">About</a>
+						<a href="#Blog">Blog</a>
+					</div>
+				</div>
+				<div class="dropdown" >
+					<button class="dropdown_btn">Drop Down</button>
+					<div class="dropdown_content" style="box-shadow: 0px 5px 19px 0px rgba(0,200,0,.5)">
+						<a href="#Home">Home</a>
+						<a href="#About">About</a>
+						<a href="#Blog">Blog</a>
+					</div>
+				</div>
+				<div class="dropdown" >
+					<button class="dropdown_btn">Drop Down</button>
+					<div class="dropdown_content" style="box-shadow: 0px 5px 19px 0px rgba(0,0,255,.5)">
+						<a href="#Home">Home</a>
+						<a href="#About">About</a>
+						<a href="#Blog">Blog</a>
+					</div>
+				</div>
+				<p>This is a sentence with <b>one</b> <b>two</b> and <b>three</b></p>
+				<div class="dropdown" >
+					<button class="dropdown_btn">Drop Down</button>
+					<div class="dropdown_content" style="box-shadow: 0px 5px 19px 0px rgba(200,0,200,.5)">
+						<a href="#Home">Home</a>
+						<a href="#About">About</a>
+						<a href="#Blog">Blog</a>
+					</div>
+				</div>
+				
+				<div class="dropdown" >
+					<button class="dropdown_btn">Drop Down</button>
+					<div class="dropdown_content" style="box-shadow: 0px 5px 19px 0px rgba(200,200,0,.5)">
+						<a href="#Home">Home</a>
+						<a href="#About">About</a>
+						<a href="#Blog">Blog</a>
+					</div>
+				</div>
+				<p>As you can see, the dropdown will cover anything that is behind it, this is controlled by the z-index. Now, lets try and do it in the <b>nav bar</b></p>
+				<p>I added a drop down to the nav bar above.</p>
+			</div>
+			<div class="content_note">
+				<h2>NOTE</h2>
+				<p>You can add drop down-esque features to really any kind of tag. Photos, div, whole websites, iframes etc.</p>
+			</div>
+			<div id="Part_12" class="content_container">
+				<h2>Part 12: Tool Tips</h2>
+				<p>This is something that can be done simply in <b title="This is HTML">HTML</b></p>
+				<p>However there is al better way to do it with HTML. <span class="tooltip">Like this.
+					<span class="tooltip_text">This is a tooltip.</span></span></p>
+					<p>It is also possible to display the tooltip
+						<span class="tooltip">above <span class="tooltip_text" style="top:-3.4em">This text is above.</span></span>
+					the text.</p>
+				</div>
+				<div id="Part_13" class="content_container">
+					<h2>Part 13: </h2>
+				</div>
+				<div id="Part_14" class="content_container">
+					<h2>Part 14: </h2>
+				</div>
+				<divl id="Part_15" class="content_container">
+					<h2>Part 15: </h2>
+				</div>
+				<div id="Part_16" class="content_container">
+					<h2>Part 16: </h2>
+				</div>
+				<div id="Part_17" class="content_container">
+					<h2>Part 17: </h2>
+				</div>
+				b=
+			</section>
+			<!-- FOOTER -->
+			<footer>
+			</footer>
+		</body>
+	</html>

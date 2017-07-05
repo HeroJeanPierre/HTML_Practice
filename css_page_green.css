@@ -13,6 +13,7 @@
 	--nav-color: #E8E800;
 }
 
+
 body{
 	background-color: var(--bg-color);
 	padding: 1em;
@@ -402,4 +403,153 @@ ul.vert_nav_2 a:hover:not(.active){
 	border-right: 5px solid black;
 }
 
+.dropdown{
+	margin: 2em;
+	position: relative;
+	display: inline-block;
+}
 
+.dropdown_btn{
+	background-color: var(--highlight-color);
+	color: black;
+	padding: 16px;
+	cursor: pointer;
+	border: none;
+	/*font-size: 100%;*/
+}
+
+.dropdown_content{
+	display: none;
+	position: absolute;
+	background-color: #BBBBBB;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 3px rgba(245,0,0,0.5);
+	z-index: 1;
+}
+
+.dropdown_content a{
+	color: black;
+	padding: 12px;
+	text-decoration: none;
+	display: block;
+	border-bottom: 1px solid black;
+}
+
+.dropdown:hover .dropdown_content{
+	display: block;
+}
+
+.dropdown_content a:hover{
+	background-color: #999999;
+}
+
+.dropdown:hover .dropdown_btn{
+	background-color: var(--secondary-highlight-color);
+}
+
+.md{
+	position: absolute;
+	clear: bottom;
+/*	position: absolute;
+	height: 20em;
+	display: block;
+	z-index: 1;
+*/	/*text-align: center;*/
+	/*border: 1px solid black;*/
+	/*border-radius: 10px;*/
+}
+
+.md ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: var(--secondary-highlight-color);
+}
+
+.md li{
+	float: left;
+}
+
+.md li a, .ddbutton{
+	display: inline-block;
+	color: var(--highlight-color);
+	text-align: center;
+	padding: 0px;
+	text-decoration: none;
+}
+
+.md li a:hover, .dd:hover .ddbutton{
+	background-color: red;
+}
+
+li.dd{
+	display: inline-block;
+}
+
+.ddcontent{
+	display: none;
+	position: absolute;
+	background-color: #F9F9F9;
+	min-width: 120px;
+	box-shadow: 0px 10px 16px 0 rgba(0, 255, 0, 0.5);
+	z-index: 1;
+}
+
+.ddcontent a{
+	color: white;
+	padding: 12px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.ddcontent a:hover{
+	background-color: #F1F1F1;
+}
+
+.dd:hover .ddcontent{
+	display: block;
+}
+
+/*This is the class that will surround the highlighted text*/
+.tooltip{
+	display: inline-block;
+	position: relative;
+	border-bottom: 1px dotted var(--highlight-color);
+	color: white;
+	cursor: pointer; 
+}
+
+.tooltip .tooltip_text{
+	visibility: hidden;
+	background-color: rgba(0,250,0, .5);
+	width: 8em;
+	color: white;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px;
+
+	/*Position*/
+	position: absolute;
+	z-index: 1;
+
+	/*Fade in: Doesn't work, try again later*/
+/*	opacity: 0;
+	transition: opacity 1s;
+*/}
+
+.tooltip:hover .tooltip_text{
+	visibility: visible;
+}
+
+.tooltip .tooltip_text::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 50%;    
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
