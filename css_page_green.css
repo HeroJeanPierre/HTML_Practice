@@ -78,6 +78,7 @@ tr:nth-child(even){
 }
 
 tr{
+	-webkit-transition: .15s;
 	transition: .15s;
 }
 
@@ -187,6 +188,7 @@ div.example{
 	border: 1px solid var(--highlight-color);
 	border-radius: var(--border-radius);
 	background-color: var(--example-container-background-color);
+	-webkit-transition: .3s;
 	transition: .3s;
 }
 
@@ -433,7 +435,8 @@ div.example h3{
 		position: absolute;
 		background-color: #BBBBBB;
 		min-width: 160px;
-		box-shadow: 0px 8px 16px 3px rgba(245,0,0,0.5);
+		-webkit-box-shadow: 0px 8px 16px 3px rgba(245,0,0,0.5);
+		        box-shadow: 0px 8px 16px 3px rgba(245,0,0,0.5);
 		z-index: 1;
 	}
 
@@ -503,7 +506,8 @@ li.dd{
 	position: absolute;
 	background-color: #F9F9F9;
 	min-width: 120px;
-	box-shadow: 0px 10px 16px 0 rgba(0, 255, 0, 0.5);
+	-webkit-box-shadow: 0px 10px 16px 0 rgba(0, 255, 0, 0.5);
+	        box-shadow: 0px 10px 16px 0 rgba(0, 255, 0, 0.5);
 	z-index: 1;
 }
 
@@ -587,10 +591,11 @@ input[type=text] {
 	width: 40%;
 	padding: 12px 20px;
 	margin: 8px 0;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	border: 3px solid #ccc;
 	-webkit-transition: .3s;
-		transition: .3s;
+			transition: .3s;
 
 	/*This is that little box that appears outside of input boxes*/
 	outline: none;
@@ -630,15 +635,11 @@ p.counter::before{
 
 	border-width: 13px;
 	border-style: solid;
-	-webkit-border-image: 
-	-webkit-gradient(linear, 0 0, 0 100%, from(var(--highlight-color-css3)), to(rgba(0, 255, 0, .5))) 1 100%;
-	-webkit-border-image: 
-	-webkit-linear-gradient(var(--highlight-color-css3), rgba(0, 255, 0, .5)) 1 100%;
-	-moz-border-image:
-	-moz-linear-gradient(var(--highlight-color-css3), rgba(0, 255, 0, .5)) 1 100%;    
 	-o-border-image:
-	-o-linear-gradient(var(--highlight-color-css3), rgba(0, 255, 0, .5)) 1 100%;
-	border-image:
+	linear-gradient(to bottom, var(--highlight-color-css3), rgba(0, 255, 0, .5)) 1 100%;
+	   border-image:
+	-webkit-gradient(linear, left top, left bottom, from(var(--highlight-color-css3)), to(rgba(0, 255, 0, .5))) 1 100%;
+	   border-image:
 	linear-gradient(to bottom, var(--highlight-color-css3), rgba(0, 255, 0, .5)) 1 100%;
 }
 
@@ -658,25 +659,18 @@ p.counter::before{
 
 #grad{
 	height: 200px;
-	background: green; /* For browsers that do not support gradients */
-	background: -webkit-linear-gradient(left, green , yellow); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(right, green, yellow); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(right, green, yellow); /* For Firefox 3.6 to 15 */
+	background: green; /* For browsers that do not support gradients */ /* For Safari 5.1 to 6.0 */ /* For Opera 11.1 to 12.0 */ /* For Firefox 3.6 to 15 */
+	background: -webkit-gradient(linear, left top, right top, from(green) , to(yellow));
 	background: linear-gradient(to right, green , yellow); /* Standard syntax (must be last) */
 }
 
 #grad2{
-	background: red; /* For browsers that do not support gradients */
-	background: -webkit-linear-gradient(left top, red, yellow); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(bottom right, red, yellow); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(bottom right, red, yellow); /* For Firefox 3.6 to 15 */
+	background: red; /* For browsers that do not support gradients */ /* For Safari 5.1 to 6.0 */ /* For Opera 11.1 to 12.0 */ /* For Firefox 3.6 to 15 */
+	background: -webkit-gradient(linear, left top, right bottom, from(red), to(yellow));
 	background: linear-gradient(to bottom right, red, yellow); /* Standard syntax */
 }
 
 #grad3{
-	background: red; /* For browsers that do not support gradients */
-	background: -webkit-radial-gradient(circle, red, yellow, green); /* Safari */
-	background: -o-radial-gradient(circle, red, yellow, green); /* Opera 11.6 to 12.0 */
-	background: -moz-radial-gradient(circle, red, yellow, green); /* Firefox 3.6 to 15 */
+	background: red; /* For browsers that do not support gradients */ /* Safari */ /* Opera 11.6 to 12.0 */ /* Firefox 3.6 to 15 */
 	background: radial-gradient(circle, red, yellow, green); /* Standard syntax */
 }
