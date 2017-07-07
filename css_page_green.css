@@ -4,18 +4,22 @@
 	--highlight-color: #00EB00;
 	--secondary-highlight-color: #008600;
 	--container-background-color: #1E1E1E;
+	--highlight-color-css3: #D4D400;
 	--example-container-background-color: #626262;
 	--secondary-container-background-color: #506450;
 	--border-radius: 10px;
-	--note-color: red;
+	--note-color: #FF5500;
 	--bg-color: #000000;
 	--text-shadow: black;
 	--nav-color: #E8E800;
 }
 
+
 body{
+	counter-reset: section;
 	background-color: var(--bg-color);
 	padding: 1em;
+
 }
 
 header{
@@ -52,7 +56,7 @@ p, input, blockquote, basefont, li, table, th, td, small{
 table, td, th{
 /*	border-left: 1px solid ;
 	border-right: 1px solid grey;
-*/	border-collapse: collapse;
+	*/	border-collapse: collapse;
 }
 
 td, th{
@@ -73,6 +77,10 @@ tr:nth-child(even){
 	background-color: #707070
 }
 
+tr{
+	transition: .15s;
+}
+
 tr:hover{
 	background-color: #909090;
 }
@@ -90,7 +98,7 @@ a{
 ul.menu{
 	/*z-index: -1;*/
 	text-align: center;
-	padding: 16px;
+	padding: 0px;
 	border-radius: 10px;
 	background-color: var(--secondary-container-background-color);
 }
@@ -109,6 +117,7 @@ li.menu a{
 
 li.menu a:hover{
 	background-color: var(--bg-color);
+	
 }
 
 li.menu a.active{
@@ -123,6 +132,7 @@ div.content_container{
 	border-style: none none none solid; /*Left Highlight*/
 	background-color: var(--container-background-color);
 	border-radius: 10px;
+	counter-reset: par;
 }
 
 div.content_note{
@@ -177,10 +187,11 @@ div.example{
 	border: 1px solid var(--highlight-color);
 	border-radius: var(--border-radius);
 	background-color: var(--example-container-background-color);
+	transition: .3s;
 }
 
 div.example:hover{
-	background-color: #56565 6;
+	background-color: #565656;
 }
 
 div.example p{
@@ -197,209 +208,475 @@ div.example h3{
 	color: var(--highlight-color);
 	font-size: xx-large;
 	font-family: serif;
-}*/
+	}*/
 
 
-/*Dashed around*/
-#cool_border_1{
-	padding: 1em;
-	border-color: var(--highlight-color);
-	border-width: 3px;
-	border-style: dashed;
-	border-radius: 10px;
-	background-color: var(--example-container-background-color);
-}
+	/*Dashed around*/
+	#cool_border_1{
+		padding: 1em;
+		border-color: var(--highlight-color);
+		border-width: 3px;
+		border-style: dashed;
+		border-radius: 10px;
+		background-color: var(--example-container-background-color);
+	}
 
-/*Underlined*/
-#cool_border_2{
-	padding: 1em;
-	border-color: var(--highlight-color);
-	border-width: 10px;
-	border-style: none none solid none;
-	border-radius: 10px;
-	background-color: var(--example-container-background-color);
-}
+	/*Underlined*/
+	#cool_border_2{
+		padding: 1em;
+		border-color: var(--highlight-color);
+		border-width: 10px;
+		border-style: none none solid none;
+		border-radius: 10px;
+		background-color: var(--example-container-background-color);
+	}
 
-/*Top and bottom solid*/
-#cool_border_3{
-	padding: 1em;
-	border-color: var(--highlight-color);
-	border-width: 10px;
-	border-style: solid none solid none;
-	border-radius: 10px;
-	background-color: var(--example-container-background-color);
-}
+	/*Top and bottom solid*/
+	#cool_border_3{
+		padding: 1em;
+		border-color: var(--highlight-color);
+		border-width: 10px;
+		border-style: solid none solid none;
+		border-radius: 10px;
+		background-color: var(--example-container-background-color);
+	}
 
-#margin_left_1{
-	margin-top: 1em;
-	padding: 1em;
-	margin-left: 0%;
-	border-color: var(--highlight-color);
-	border-width: 1px;
-	border-style: solid;
-	border-radius: 10px;
-	background-color: var(--example-container-background-color);
-}
+	#margin_left_1{
+		margin-top: 1em;
+		padding: 1em;
+		margin-left: 0%;
+		border-color: var(--highlight-color);
+		border-width: 1px;
+		border-style: solid;
+		border-radius: 10px;
+		background-color: var(--example-container-background-color);
+	}
 
-#margin_left_2{
-	margin-top: 1em;
-	padding: 1em;
-	margin-left: 10%;
-	border-color: var(--highlight-color);
-	border-width: 1px;
-	border-style: solid;
-	border-radius: 10px;
-	background-color: var(--example-container-background-color);
-}
+	#margin_left_2{
+		margin-top: 1em;
+		padding: 1em;
+		margin-left: 10%;
+		border-color: var(--highlight-color);
+		border-width: 1px;
+		border-style: solid;
+		border-radius: 10px;
+		background-color: var(--example-container-background-color);
+	}
 
-#margin_left_3{
-	margin-top: 1em;
-	padding: 1em;
-	margin-left: 20%;
-	border-color: var(--highlight-color);
-	border-width: 1px;
-	border-style: solid;
-	border-radius: 10px;
-	background-color: var(--example-container-background-color);
-}
+	#margin_left_3{
+		margin-top: 1em;
+		padding: 1em;
+		margin-left: 20%;
+		border-color: var(--highlight-color);
+		border-width: 1px;
+		border-style: solid;
+		border-radius: 10px;
+		background-color: var(--example-container-background-color);
+	}
 
-#margin_left_4{
-	margin-top: 1em;
-	padding: 1em;
-	margin-left: 30%;
-	border-color: var(--highlight-color);
-	border-width: 1px;
-	border-style: solid;
-	border-radius: 10px;
-	background-color: var(--example-container-background-color);
-}
+	#margin_left_4{
+		margin-top: 1em;
+		padding: 1em;
+		margin-left: 30%;
+		border-color: var(--highlight-color);
+		border-width: 1px;
+		border-style: solid;
+		border-radius: 10px;
+		background-color: var(--example-container-background-color);
+	}
 
-#margin_auto{
-	margin: auto;
-	margin-top: 1em;
-	width: 50%;
-	padding: 1em;
-	border-color: var(--highlight-color);
-	border-width: 1px;
-	border-style: solid;
-	border-radius: 10px;
-	background-color: var(--example-container-background-color);
-}
+	#margin_auto{
+		margin: auto;
+		margin-top: 1em;
+		width: 50%;
+		padding: 1em;
+		border-color: var(--highlight-color);
+		border-width: 1px;
+		border-style: solid;
+		border-radius: 10px;
+		background-color: var(--example-container-background-color);
+	}
 
-#outline_example_1{
-	width: 75%;
-	margin: 3em auto auto auto ;
-	padding: 2em;
-	border: 1px solid var(--highlight-color);
-	outline-style: solid;
-	outline-width: 5px;
-	outline-color: red;
- }
+	#outline_example_1{
+		width: 75%;
+		margin: 3em auto auto auto ;
+		padding: 2em;
+		border: 1px solid var(--highlight-color);
+		outline-style: solid;
+		outline-width: 5px;
+		outline-color: red;
+	}
 
-#text_format_example_1 p{
-	text-indent: 3em;	background-color: var(--example-container-background-color);
+	#text_format_example_1 p{
+		text-indent: 3em;	background-color: var(--example-container-background-color);
 
-	text-align: justify;
-}
+		text-align: justify;
+	}
 
-#text_format_example_1 h3{
-	text-decoration: underline;
-	text-shadow: 2px 2px var(--text-shadow);
-}
+	#text_format_example_1 h3{
+		text-decoration: underline;
+		text-shadow: 2px 2px var(--text-shadow);
+	}
 
-#center_test_1{
-	margin: auto;
-	width:25%;
-	border-style: solid none solid none;
-	border-width: 3em 0 3em 0;
-	border-color: var(--highlight-color);
-	text-align: center;
-	background-color: black;
-}
+	#center_test_1{
+		margin: auto;
+		width:25%;
+		border-style: solid none solid none;
+		border-width: 3em 0 3em 0;
+		border-color: var(--highlight-color);
+		text-align: center;
+		background-color: black;
+	}
 
-#center_test_1 h2{
-	text-align: center;
-}
+	#center_test_1 h2{
+		text-align: center;
+	}
 
-.hovershow{
-	border: 1px solid var(--highlight-color);
-	padding: 2em;
-	border-radius: 10px;
-	background-color: black;
-}
+	.hovershow{
+		border: 1px solid var(--highlight-color);
+		padding: 2em;
+		border-radius: 10px;
+		background-color: black;
+	}
 
-.hovershow p{
-	display: none;
-}
+	.hovershow p{
+		display: none;
+	}
 
-.hovershow:hover p{
+	.hovershow:hover p{
+		display: block;
+	}
+
+	ul.vert_nav{
+		/*position: absolute;*/
+		/*float: left;*/
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		width: 20%;
+		background-color: var(--secondary-container-background-color);
+	}
+
+	ul.vert_nav li{
+		border-bottom: 1px solid black;
+		text-align: center;
+	}
+
+	ul.vert_nav a{
+		display: block;
+		color: black;
+		padding: 16px;
+		text-decoration: none;
+	}
+
+	ul.vert_nav a:hover:not(.active){
+		background-color: white;
+		border-left: 5px solid black;
+		border-right: 5px solid black;
+	}
+
+	ul.vert_nav a.active{	
+		background-color: var(--highlight-color);
+	}
+
+	ul.vert_nav_2{
+		list-style-type: none;
+		margin: 1em 0 0 0;
+		padding: 0;
+		width: 50%;
+		background-color: blue;	
+		text-align: center;
+	}
+
+	ul.vert_nav_2 li{
+		/*position: absolute;*/
+		margin: 0;
+		padding: 0;
+		width: 30%;
+		border-bottom: 1px solid black;
+		text-align: center;
+		/*display: block;*/
+		display: inline-block;
+	}
+
+	ul.vert_nav_2 a{
+		display:block;
+		/*display: block;*/
+		color: black;
+		padding: 16px;
+		text-decoration: none;
+	}
+
+	ul.vert_nav_2 a:hover:not(.active){
+		background-color: white;
+		border-left: 5px solid black;
+		border-right: 5px solid black;
+	}
+
+	.dropdown{
+		margin: 2em;
+		position: relative;
+		display: inline-block;
+	}
+
+	.dropdown_btn{
+		background-color: var(--highlight-color);
+		color: black;
+		padding: 16px;
+		cursor: pointer;
+		border: none;
+		/*font-size: 100%;*/
+	}
+
+	.dropdown_content{
+		display: none;
+		position: absolute;
+		background-color: #BBBBBB;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 3px rgba(245,0,0,0.5);
+		z-index: 1;
+	}
+
+	.dropdown_content a{
+		color: black;
+		padding: 12px;
+		text-decoration: none;
+		display: block;
+		border-bottom: 1px solid black;
+	}
+
+	.dropdown:hover .dropdown_content{
+		display: block;
+	}
+
+	.dropdown_content a:hover{
+		background-color: #999999;
+	}
+
+	.dropdown:hover .dropdown_btn{
+		background-color: var(--secondary-highlight-color);
+	}
+
+	.md{
+		position: absolute;
+		clear: bottom;
+/*	position: absolute;
+	height: 20em;
 	display: block;
+	z-index: 1;
+	*/	/*text-align: center;*/
+	/*border: 1px solid black;*/
+	/*border-radius: 10px;*/
 }
 
-ul.vert_nav{
-	/*position: absolute;*/
-	/*float: left;*/
+.md ul{
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	width: 20%;
-	background-color: var(--secondary-container-background-color);
+	overflow: hidden;
+	background-color: var(--secondary-highlight-color);
 }
 
-ul.vert_nav li{
-	border-bottom: 1px solid black;
-	text-align: center;
+.md li{
+	float: left;
 }
 
-ul.vert_nav a{
-	display: block;
-	color: black;
-	padding: 16px;
-	text-decoration: none;
-}
-
-ul.vert_nav a:hover:not(.active){
-	background-color: white;
-	border-left: 5px solid black;
-	border-right: 5px solid black;
-}
-
-ul.vert_nav a.active{	
-	background-color: var(--highlight-color);
-}
-
-ul.vert_nav_2{
-	list-style-type: none;
-	margin: 1em 0 0 0;
-	padding: 0;
-	width: 50%;
-	background-color: blue;	
-	text-align: center;
-}
-
-ul.vert_nav_2 li{
-	/*position: absolute;*/
-	margin: 0;
-	padding: 0;
-	width: 30%;
-	border-bottom: 1px solid black;
-	text-align: center;
-	/*display: block;*/
+.md li a, .ddbutton{
 	display: inline-block;
-}
-
-ul.vert_nav_2 a{
-	display:block;
-	/*display: block;*/
-	color: black;
-	padding: 16px;
+	color: var(--highlight-color);
+	text-align: center;
+	padding: 0px;
 	text-decoration: none;
 }
 
-ul.vert_nav_2 a:hover:not(.active){
-	background-color: white;
-	border-left: 5px solid black;
-	border-right: 5px solid black;
+.md li a:hover, .dd:hover .ddbutton{
+	background-color: red;
+}
+
+li.dd{
+	display: inline-block;
+
+}
+
+.ddcontent{
+	display: none;
+	position: absolute;
+	background-color: #F9F9F9;
+	min-width: 120px;
+	box-shadow: 0px 10px 16px 0 rgba(0, 255, 0, 0.5);
+	z-index: 1;
+}
+
+.ddcontent a{
+	color: white;
+	padding: 12px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.ddcontent a:hover{
+	background-color: #F1F1F1;
+}
+
+.dd:hover .ddcontent{
+	display: block;
+}
+
+/*This is the class that will surround the highlighted text*/
+.tooltip{
+	display: inline-block;
+	position: relative;
+	border-bottom: 1px dotted var(--highlight-color);
+	color: white;
+	cursor: pointer; 
+}
+
+.tooltip .tooltip_text{
+	visibility: hidden;
+	background-color: rgba(0,250,0, .5);
+	width: 8em;
+	color: white;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px;
+
+	/*Position*/
+	position: absolute;
+	z-index: 1;
+
+	/*Fade in: Doesn't work, try again later*/
+/*	opacity: 0;
+	transition: opacity 1s;
+*/}
+
+.tooltip:hover .tooltip_text{
+	visibility: visible;
+}
+
+.tooltip .tooltip_text::after {
+	content: " ";
+	position: absolute;
+	bottom: 100%;  /* At the top of the tooltip */
+	left: 50%;    
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent transparent black transparent;
+}
+
+d.form label{
+	color: white;
+}
+
+.form input{ 
+	display: block;
+	width: 40%;
+	height: 1.5em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	border-radius: 12px;
+	color: black;
+	padding-left: 1em;
+	background-color: var(--secondary-highlight-color);
+	border: 2px solid black;
+	border-style: none none solid none
+}
+
+input[type=text] {
+	width: 40%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: 3px solid #ccc;
+	-webkit-transition: .3s;
+		transition: .3s;
+
+	/*This is that little box that appears outside of input boxes*/
+	outline: none;
+}
+
+input[type=text]:hover{
+	width: 43%;
+}
+
+input[type=text]:focus{
+	width: 43%;
+	border: 3px solid #555;
+	background-color: lightblue;
+}
+
+div.content_container h2::before{
+	counter-increment: section;
+	content: "Part " counter(section) ": "
 }
 
 
+p.counter::before{
+	counter-increment: par;
+	content: counter(par) " - "
+}
+
+.content_container_css3{
+	counter-reset: section_css3;
+	padding: 1em;
+	margin: 2em 0em 2em 0em;
+	border-color: var(--highlight-color-css3);
+	border-width: 10px;
+	border-style: none none none solid; /*Left Highlight*/
+	background-color: var(--container-background-color);
+	border-radius: 1px;
+	counter-reset: par;
+
+	border-width: 13px;
+	border-style: solid;
+	-webkit-border-image: 
+	-webkit-gradient(linear, 0 0, 0 100%, from(var(--highlight-color-css3)), to(rgba(0, 255, 0, .5))) 1 100%;
+	-webkit-border-image: 
+	-webkit-linear-gradient(var(--highlight-color-css3), rgba(0, 255, 0, .5)) 1 100%;
+	-moz-border-image:
+	-moz-linear-gradient(var(--highlight-color-css3), rgba(0, 255, 0, .5)) 1 100%;    
+	-o-border-image:
+	-o-linear-gradient(var(--highlight-color-css3), rgba(0, 255, 0, .5)) 1 100%;
+	border-image:
+	linear-gradient(to bottom, var(--highlight-color-css3), rgba(0, 255, 0, .5)) 1 100%;
+}
+
+
+.content_container_css3 h2::before{
+	counter-increment: section_css3;
+	content: "CSS3 Part " counter(section_css3) ": "
+}
+
+.content_container_css3 h2, .content_container_css3 h3{
+	color: var(--highlight-color-css3);
+}
+
+.content_container_css3 .example{
+	border-color: var(--highlight-color-css3);
+}
+
+#grad{
+	height: 200px;
+	background: green; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left, green , yellow); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, green, yellow); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, green, yellow); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, green , yellow); /* Standard syntax (must be last) */
+}
+
+#grad2{
+	background: red; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left top, red, yellow); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom right, red, yellow); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom right, red, yellow); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom right, red, yellow); /* Standard syntax */
+}
+
+#grad3{
+	background: red; /* For browsers that do not support gradients */
+	background: -webkit-radial-gradient(circle, red, yellow, green); /* Safari */
+	background: -o-radial-gradient(circle, red, yellow, green); /* Opera 11.6 to 12.0 */
+	background: -moz-radial-gradient(circle, red, yellow, green); /* Firefox 3.6 to 15 */
+	background: radial-gradient(circle, red, yellow, green); /* Standard syntax */
+}

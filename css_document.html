@@ -4,7 +4,7 @@
 		<title>CSS Page</title>
 		<link rel="stylesheet" type="text/css" href="css_page_green.css">
 		<!-- ADD HREF TO FONT AWESOME -->
-		<link rel="stylesheet" type="text/css" href="font_awesome">
+		<link rel="stylesheet" href="images/font-awesome.min.css">
 		<!-- ADD HREF TO FONT AWESOME -->
 		<meta name="description" content="Page that describes css">
 		<meta name="author" content="Julien Jean-Pierre">
@@ -24,28 +24,27 @@
 		<nav>
 			<ul class="menu">
 				<li class="menu"><a href="Simple_Document.html">HTML</a></li>
-				<li class="menu"><a href="css_document.html">CSS</a></li>
+				<li class="menu dd">
+					<a class="ddbutton" href="css_document.html">CSS</a>
+					<div class="ddcontent">
+						<a href="#Part_1">Part 1: Borders</a>
+						<a href="#Part_2">Part 2: Margins</a>
+						<a href="#Part_3">Part 3: Box Model</a>
+						<a href="#Part_4">Part 4: Text Formatting</a>
+						<a href="#Part_5">Part 5: Fonts</a>
+						<a href="#Part_6">Part 6: Icons</a>
+						<a href="#Part_7">Part 7: Tables</a>
+					</div>
+				</li>
 				<li class="menu"><a href="javascript_document.html">JavaScript</a></li>
 				<li class="menu"><a href="sql_document.html">SQL</a></li>
 			</ul>
-
-			<div class="content_nav">
-				<h2>Navigation</h2>
-				<ul>
-					<li><a href="#Part_1">Part 1: Borders</a></li>
-					<li><a href="#Part_2">Part 2: Margins</a></li>
-					<li><a href="#Part_3">Part 3: Box Model</a></li>
-					<li><a href="#Part_4">Part 4: Text Formatting</a></li>
-					<li><a href="#Part_5">Part 5: Fonts</a></li>
-					<li><a href="#Part_6">Part 6: Icons</a></li>
-					<li><a href="#Part_7">Part 7: Tables</a></li>
-				</ul>
-			</div>
 		</nav>
+
 		<!-- SECTION -->
 		<section>
 			<div class="content_container" id="Part_1">
-				<h2>Part 1: Borders</h2>
+				<h2>Borders</h2>
 				<p>First off, it is kind of hard to display a bunch of CSS information from within an HTML file. Whereas in the HTML section it wasn't too hard. Anyway, here is my best try. </p>
 				<h3>Examples of Borders</h3>
 				<div id="cool_border_1"	>
@@ -60,11 +59,11 @@
 				<br><hr><br>
 				<div id="cool_border_3">
 					<h3>Lorum Ipsum</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies tellus iaculis odio rhoncus, cursus varius urna faucibus. Maecenas aliquam faucibus quam eu vestibulum. Sed a risus nec elit vulputate ultricies vel id mi. Vivamus eget erat erat. Vestibulum eu sem id est auctor rutrum eget eget nisi. Pellentesque vitae turpis dignissim ex sollicitudin mollis ut et sapien. Nam rutrum lacus neque, eget efficitur tellus tristique at. Sed nec egestas eros. Phasellus commodo odio augue, ac hendrerit nunc efficitur non. Suspendisse potenti. Vestibulum malesuada lorem non elit hendrerit, et vestibulum erat pretium. Nulla nisi turpis, vehicula vitae commodo non, molestie id libero. Aliquam viverra lacus ut egestas gravida. Vestibulum orci turpis, molestie sed risus vel, porta sagittis dui. Praesent placerat, mauris id porta pharetra, orci enim pretium magna, non bibendum sem dui sit amet nisl.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies tellus iaculis odio rhoncus, cursus varius urna faucibus. Maecenas aliquam faucibus quam eu vestibulum. Sed a risus nec elit vulputate ultricies vel id mi. Vivamus eget erat erat. Vestibulum eu sem id est auctor rutrum eget eget nisi. Pellentesque vitae turpis dignissim ex sollicitudin mollis ut et sapien. Nam rutrum lacus neque, eget efficitur tellus tristique at. Sed nec egestas eros. Phasellus commodo odio augue, ac hendrerit nunc efficitur non. Suspendisse potenti. Vestibulum malesuada lorem non elit hendrerit, et vestibulum erat pretium. Nullaj nisi turpis, vehicula vitae commodo non, molestie id libero. Aliquam viverra lacus ut egestas gravida. Vestibulum orci turpis, molestie sed risus vel, porta sagittis dui. Praesent placerat, mauris id porta pharetra, orci enim pretium magna, non bibendum sem dui sit amet nisl.</p>
 				</div>
 			</div>
 			<div class="content_container" id="Part_2">
-				<h2>Part 2: Margins</h2>
+				<h2>Margins</h2>
 				<p>Margins you say? Well that is easy. It is just the space outside the border (Padding is inside). Nothing to wild.</p>
 				<h3>Margin Examples...</h3>
 				<div id="margin_left_1">
@@ -94,7 +93,7 @@
 				<p>The next section is on padding. It is like margin except on the inside of the border, I don't think will be going over it.</p>
 			</div>
 			<div class="content_container" id="Part_3">
-				<h2>Part 3: Box Model</h2>
+				<h2>Box Model</h2>
 				<p>This is a simple concept but it it basically means all content is contained within 3 fields. In this order.
 					<ol>
 						<li>Margin</li>
@@ -109,7 +108,7 @@
 				<p>As you can see in the above section:)</p>
 			</div>
 			<div class="content_container" id="Part_4">
-				<h2>Part 4: Outlines</h2>
+				<h2>Outlines</h2>
 				<p>What is an outline? Well, that is the thing outside of borders. Here, I will draw a solid red line around the outline of this solid bordered &ltdiv&gt:</p>
 				<div id="outline_example_1">
 					<h3>Lorum Ipsum</h3>
@@ -118,7 +117,7 @@
 				<p>Something worth noting is that outline uses the same shorthand as border. </p>
 			</div>
 			<div class="content_container" id="Part_5">
-				<h2>Part 5: Text Formatting</h2>
+				<h2>Text Formatting</h2>
 				<p>So there is a lot of different things that can be done, here are a few examples.</p>
 				<h3>Indentation</h3>
 				<div class="example" id="text_format_example_1">
@@ -128,7 +127,7 @@
 				<p>*Indented, text shadow, underlined, and justified!</p>
 			</div>
 			<div class="content_container" id="Part_5">
-				<h2>Part 5: Fonts</h2>
+				<h2>Fonts</h2>
 				<p>So there are a lot of different fonts that you can choose from.</p>
 				<div class="example">
 					<h3>Times</h3>
@@ -141,7 +140,7 @@
 				<p>Of course there are more things like variants, monospace, font-style etc. But that is mostly situational.</p>
 			</div>
 			<div class="content_container" id="Part_6">
-				<h2>Part 6: Icons!</h2>
+				<h2>Icons!</h2>
 				<p>Icons are pretty important for a good looking webpage. Awesome font provides a lot of great icons, lets try theres.</p>
 				<ul>
 					<li>Cloud - <span class="fa fa-cloud"></span></li>
@@ -150,7 +149,7 @@
 				</ul>
 			</div>
 			<div class="content_container" id="Part_7">
-				<h2>Part 7: Tables</h2>
+				<h2>Tables</h2>
 				<p>This is the fun part. Tables!</p>
 				<div class="example">
 					<h3>Alternating Colors + Highlighted Hover</h3>
@@ -221,7 +220,7 @@
 					</div>
 				</div>
 				<div class="content_container" id="Part_8">
-					<h2>Part 8: Display and Position</h2>
+					<h2>Display and Position</h2>
 					<p>First off there are two modes that can be used to display items, <strong>inlne</strong> or
 						<strong>block</strong>. Inline is things like &ltspan&gt and block is things like &ltdiv&gt.
 					</p>
@@ -247,7 +246,7 @@
 					</ul>
 				</div>
 				<div class="content_container" id="Part_9">
-					<h2>Part 9: Overflow</h2>
+					<h2>Overflow</h2>
 					<p>What is overflow? Well, it is what it sounds like, it is when text exceeds the max height given by a block element. When this happens, it there should be something to add a scroll bar.</p>
 					<div class="example" style="max-height: 300px">
 						<h3>Overflow - Bad</h3>
@@ -275,7 +274,7 @@
 				</ul>
 			</div>
 			<div class="content_container" id="Part_10">
-				<h2>Part 10: Vertical and Horizontal Spacing</h2>
+				<h2>Vertical and Horizontal Spacing</h2>
 				<div id="center_test_1">
 					<h3>The is centered.</h3>
 				</div>
@@ -294,7 +293,7 @@
 					<li>:first-child</li>
 					<li>:nth-child(even)</li>
 				</ul>
-				<h2>Part 10.3: Pseudo Element</h2>
+				<h3>Part 10.3: Pseudo Element</h3>
 				<p>::before, ::after, ::selection, ::first-line, ::first-letter not much else to say.</p>
 			</div>
 			<div class="content_note">
@@ -302,26 +301,155 @@
 				<ul>
 					<li>Opacity</li>
 				</ul>
-				
 			</div>
 			<div class="content_container" id="Part_11">
-				<h2>Part 11: Navigation Bar</h2>
+				<h2>Navigation Bar</h2>
 				<p>There are a lot of different types of nav bars</p>
 				<ul class="vert_nav">
 					<li><a class="active" href="#About">Home</a></li>
 					<li><a href="#About">About</a></li>
 					<li><a href="#About">Blog</a></li>
 				</ul>
-
 				<ul class="vert_nav_2">
 					<li><a href="#About">Home</a></li>
 					<li><a href="#About">About</a></li>
 					<li><a href="#About">Blog</a></li>
 				</ul>
 			</div>
+			<div class="content_container" id="Part_11">
+				<h2>Drop Down</h2>
+				<p>So building a dropdown menu just involves intelligently using the hover tool. Kind on like the example above. Let's start by making a drop down button</p>
+				<div class="dropdown" >
+					<button class="dropdown_btn">Drop Down</button>
+					<div class="dropdown_content" style="box-shadow: 0px 5px 19px 0px rgba(200,0,0,.5)">
+						<a href="#Home">Home</a>
+						<a href="#About">About</a>
+						<a href="#Blog">Blog</a>
+					</div>
+				</div>
+				<div class="dropdown" >
+					<button class="dropdown_btn">Drop Down</button>
+					<div class="dropdown_content" style="box-shadow: 0px 5px 19px 0px rgba(0,200,0,.5)">
+						<a href="#Home">Home</a>
+						<a href="#About">About</a>
+						<a href="#Blog">Blog</a>
+					</div>
+				</div>
+				<div class="dropdown" >
+					<button class="dropdown_btn">Drop Down</button>
+					<div class="dropdown_content" style="box-shadow: 0px 5px 19px 0px rgba(0,0,255,.5)">
+						<a href="#Home">Home</a>
+						<a href="#About">About</a>
+						<a href="#Blog">Blog</a>
+					</div>
+				</div>
+				<p>This is a sentence with <b>one</b> <b>two</b> and <b>three</b></p>
+				<div class="dropdown" >
+					<button class="dropdown_btn">Drop Down</button>
+					<div class="dropdown_content" style="box-shadow: 0px 5px 19px 0px rgba(200,0,200,.5)">
+						<a href="#Home">Home</a>
+						<a href="#About">About</a>
+						<a href="#Blog">Blog</a>
+					</div>
+				</div>
+				
+				<div class="dropdown" >
+					<button class="dropdown_btn">Drop Down</button>
+					<div class="dropdown_content" style="box-shadow: 0px 5px 19px 0px rgba(200,200,0,.5)">
+						<a href="#Home">Home</a>
+						<a href="#About">About</a>
+						<a href="#Blog">Blog</a>
+					</div>
+				</div>
+				<p>As you can see, the dropdown will cover anything that is behind it, this is controlled by the z-index. Now, lets try and do it in the <b>nav bar</b></p>
+				<p>I added a drop down to the nav bar above.</p>
+			</div>
+			<div class="content_note">
+				<h2>NOTE</h2>
+				<p>You can add drop down-esque features to really any kind of tag. Photos, div, whole websites, iframes etc.</p>
+			</div>
+			<div id="Part_12" class="content_container">
+				<h2>Tool Tips</h2>				
+				<p>This is something that can be done simply in <b title="This is HTML">HTML</b></p>
+				<p>However there is all better way to do it with HTML. <span class="tooltip">Like this.
+					<span class="tooltip_text">This is a tooltip.</span></span></p>
+					<p>It is also possible to display the tooltip
+						<span class="tooltip">above <span class="tooltip_text" style="top:-3.4em">This text is above.</span></span>
+					the text.</p>
+			</div>	
+
+
+			<div class="content_container" id="Part_13">
+				<h2>Forms</h2>
+				<p>Something that can be greatly improved with css is forms, take a look! This is width</p>
+				<form class="form">
+					<label for="fname" style="color: white;">First Name</label>
+					<input type="text" id="fname" name="fname">
+					<label for="lname" style="color: white;">Last Name</label>
+					<input type="text" id="lname" name="lname">
+				</form>
+
+				<p>Or a search bar...<i class="fa fa-search" aria-hidden="true"></i></p>
+				<form>
+					<input type="text" name="search" placeholder="Search...">
+				</form>
+			</div>
+
+			<div class="content_container" id="Part_14">
+				<h2>Counters</h2>
+				<p>What is a counter? It is something that can automatically count objects in HTML</p>
+				<p>I just added them to the PART sections of this document.</p>
+				<p class="counter">Paragraph: 001</p>
+				<p class="counter">Paragraph: 002</p>
+				<p class="counter">Paragraph: 003</p>
+			</div>
+
+			<div class="content_note">
+				<h2>Thats about it for CSS</h2>
+				<p>Now we can move on to CSS3!</p>
+				<p>Now something worth noting is that this will not be extensive and I will try to touch a little bit on each topic just to familiarize myself with it.</p>
+			</div>
+
+			<div class="content_container_css3">
+				<h2>Intros + Some Stuff</h2>
+				<p>What is CSS3? Well, it is the latest form of CSS and some of the most important additions include:</p>
+				<ul>
+					<li>Selectors</li>
+					<li>Box Model</li>
+					<li>Backgrounds and Borders</li>
+					<li>Image Values and Replaced Content</li>
+					<li>Text Effects</li>
+					<li>2D/3D Transformations</li>
+					<li>Animations</li>
+					<li>Multiple Column Layout</li>
+					<li>User Interface</li>
+				</ul>
+				<h3>Rounded Corners</h3>
+				<div class="example"style="max-width: 20%; height: 4em; border-radius:12px 43px 43px 43px;"></div>
+				<div class="example"style="max-width: 20%; height: 4em; border-radius:12px 12px 43px 43px;"></div>
+				<div class="example"style="max-width: 20%; height: 4em; border-radius:43px 43px 43px;"></div>
+			</div>
+			<div class="content_container_css3">
+				<h2>Background</h2>
+				<h3>Images</h3>
+				<div class="example" style="background-image: url('images/back.jpg'); background-repeat: no-repeat; background-position: top left; max-width: 720px;">
+					<h3>Lorum Ipsum</h3>
+					<p style="color: black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies tellus iaculis odio rhoncus, cursus varius urna faucibus. Maecenas aliquam faucibus quam eu vestibulum. Sed a risus nec elit vulputate ultricies vel id mi. Vivamus eget erat erat. Vestibulum eu sem id est auctor rutrum eget eget nisi. Pellentesque vitae turpis dignissim ex sollicitudin mollis ut et sapien. Nam rutrum lacus neque, eget efficitur tellus tristique at. Sed nec egestas eros. Phasellus commodo odio augue, ac hendrerit nunc efficitur non. Suspendisse potenti. Vestibulum malesuada lorem non elit hendrerit, et vestibulum erat pretium. Nulla nisi turpis, vehicula vitae commodo non, molestie id libero. Aliquam viverra lacus ut egestas gravida. Vestibulum orci turpis, molestie sed risus vel, porta sagittis dui. Praesent placerat, mauris id porta pharetra, orci enim pretium magna, non bibendum sem dui sit amet nec elit vulputate ultricies vel id mi. Vivamus eget erat erat. Vestibulum eu sem id est auctor rutrum eget eget nisi. Pellentesque vitae turpis dignissim ex sollicitudin mollis ut et sapien. Nam rutrum lacus neque, eget efficitur tellus tristique at. Sed nec egestas eros. Phasellus commodo odio augue, ac hendrerit nunc efficitur non. Suspendisse potenti. Vestibulum malesuada lorem non elit hendrerit, et vestibulum erat pretium. Nulla nisi turpis, vehicula vitae commodo non, molestie id libero. Aliquam viverra lacus ut egestas gravida. Vestibulum orci turpis, molestie sed risus vel, porta sagittis dui. Praesent placerat, mauris id porta pharetra, orci enim pretium magna, non bibendum sem dui sit amet nisl.</p>								
+				</div>
+				<h3>Gradients</h3>
+				<div class="example" id="grad">
+					<p style="color: black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies tellus iaculis odio rhoncus, cursus varius urna faucibus. Maecenas aliquam faucibus quam eu vestibulum. Sed a risus nec elit vulputate ultricies vel id mi. Vivamus eget erat erat. Vestibulum eu sem id est auctor rutrum eget eget nisi. Pellentesque vitae turpis dignissim ex sollicitudin mollis ut et sapien. Nam rutrum lacus neque, eget efficitur tellus tristique at. Sed nec egestas eros. Phasellus commodo odio augue, ac hendrerit nunc efficitur non. Suspendisse potenti. Vestibulum malesuada lorem non elit hendrerit, et vestibulum erat pretium. Nulla nisi turpis, vehicula vitae commodo non, molestie id libero. Aliquam viverra lacus ut egestas gravida. Vestibulum orci turpis, molestie sed risus vel, porta sagittis dui. Praesent placerat, mauris id porta pharetra, orci enim pretium magna, non bibendum sem dui sit amet nec elit vulputate ultricies vel id mi. Vivamus eget erat erat. Vestibulum eu sem id est auctor rutrum eget eget nisi. Pellentesque vitae turpis dignissim ex sollicitudin mollis ut et sapien. Nam rutrum lacus neque, eget efficitur tellus tristique at. Sed nec egestas eros. Phasellus commodo odio augue, ac hendrerit nunc efficitur non. Suspendisse potenti. Vestibulum malesuada lorem non elit hendrerit, et vestibulum erat pretium. Nulla nisi turpis, vehicula vitae commodo non, molestie id libero. Aliquam viverra lacus ut egestas gravida. Vestibulum orci turpis, molestie sed risus vel, porta sagittis dui. Praesent placerat, mauris id porta pharetra, orci enim pretium magna, non bibendum sem dui sit amet nisl.</p>
+				</div>
+				<div class="example" id="grad2">
+					<p style="color: black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies tellus iaculis odio rhoncus, cursus varius urna faucibus. Maecenas aliquam faucibus quam eu vestibulum. Sed a risus nec elit vulputate ultricies vel id mi. Vivamus eget erat erat. Vestibulum eu sem id est auctor rutrum eget eget nisi. Pellentesque vitae turpis dignissim ex sollicitudin mollis ut et sapien. Nam rutrum lacus neque, eget efficitur tellus tristique at. Sed nec egestas eros. Phasellus commodo odio augue, ac hendrerit nunc efficitur non. Suspendisse potenti. Vestibulum malesuada lorem non elit hendrerit, et vestibulum erat pretium. Nulla nisi turpis, vehicula vitae commodo non, molestie id libero. Aliquam viverra lacus ut egestas gravida. Vestibulum orci turpis, molestie sed risus vel, porta sagittis dui. Praesent placerat, mauris id porta pharetra, orci enim pretium magna, non bibendum sem dui sit amet nec elit vulputate ultricies vel id mi. Vivamus eget erat erat. Vestibulum eu sem id est auctor rutrum eget eget nisi. Pellentesque vitae turpis dignissim ex sollicitudin mollis ut et sapien. Nam rutrum lacus neque, eget efficitur tellus tristique at. Sed nec egestas eros. Phasellus commodo odio augue, ac hendrerit nunc efficitur non. Suspendisse potenti. Vestibulum malesuada lorem non elit hendrerit, et vestibulum erat pretium. Nulla nisi turpis, vehicula vitae commodo non, molestie id libero. Aliquam viverra lacus ut egestas gravida. Vestibulum orci turpis, molestie sed risus vel, porta sagittis dui. Praesent placerat, mauris id porta pharetra, orci enim pretium magna, non bibendum sem dui sit amet nisl.</p>
+				</div>	
+				<div class="example" id="grad3">
+					<p style="color: black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies tellus iaculis odio rhoncus, cursus varius urna faucibus. Maecenas aliquam faucibus quam eu vestibulum. Sed a risus nec elit vulputate ultricies vel id mi. Vivamus eget erat erat. Vestibulum eu sem id est auctor rutrum eget eget nisi. Pellentesque vitae turpis dignissim ex sollicitudin mollis ut et sapien. Nam rutrum lacus neque, eget efficitur tellus tristique at. Sed nec egestas eros. Phasellus commodo odio augue, ac hendrerit nunc efficitur non. Suspendisse potenti. Vestibulum malesuada lorem non elit hendrerit, et vestibulum erat pretium. Nulla nisi turpis, vehicula vitae commodo non, molestie id libero. Aliquam viverra lacus ut egestas gravida. Vestibulum orci turpis, molestie sed risus vel, porta sagittis dui. Praesent placerat, mauris id porta pharetra, orci enim pretium magna, non bibendum sem dui sit amet nec elit vulputate ultricies vel id mi. Vivamus eget erat erat. Vestibulum eu sem id est auctor rutrum eget eget nisi. Pellentesque vitae turpis dignissim ex sollicitudin mollis ut et sapien. Nam rutrum lacus neque, eget efficitur tellus tristique at. Sed nec egestas eros. Phasellus commodo odio augue, ac hendrerit nunc efficitur non. Suspendisse potenti. Vestibulum malesuada lorem non elit hendrerit, et vestibulum erat pretium. Nulla nisi turpis, vehicula vitae commodo non, molestie id libero. Aliquam viverra lacus ut egestas gravida. Vestibulum orci turpis, molestie sed risus vel, porta sagittis dui. Praesent placerat, mauris id porta pharetra, orci enim pretium magna, non bibendum sem dui sit amet nisl.</p>
+				</div>
+			</div>
 		</section>
 		<!-- FOOTER -->
 		<footer>
 		</footer>
 	</body>
-</html>
+	</html>
