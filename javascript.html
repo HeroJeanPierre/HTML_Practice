@@ -1,4 +1,4 @@
-o<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="javascript.css">
@@ -8,6 +8,8 @@ o<!DOCTYPE html>
 		<title>JavaScript Page</title>
 		<meta name="name" content="content">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- SCRIPTS -->
+		<script src="libraries/three.js"></script>
 		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?LR-verbose&snipver=1&LiveTest=1"></' + 'script>')</script>
 		<script src="scripts/javascript.js"></script>
 	</head>
@@ -22,61 +24,24 @@ o<!DOCTYPE html>
 		</header>
 		<nav class="">
 			<ul>
-				<li><a href="Simple_Document.html" title="">HTML</a></li>
-				<li><a href="css_document.html" title="">CSS</a></li>
-				<li><a href="#Self" title="">JavaScript</a></li>
-				<li><a href="SQL" title="">SQL</a></li>
+				<li><a href="#Self" title="">Three.js</a></li>
+				<li><a href="#ICP" title="">ICP</a></li>
+				<li><a href="#GICP" title="">GICP</a></li>
 			</ul>
 		</nav>
 		<section>
-			<div class="content_container">
-				<div class="content_nav">
-					
-				</div>
-			</div>
 			<div class="section_container">
 				<div class="content_section_comment">
 					<h2>Overview</h2>
-					<p>This will start from the very basics and will progress to more and more advanced topics the further things move down.</p>
+					<p>This will be a tour of my understanding of three.js</p>
 				</div>
 			</div>
 			<div class="section_container" id="content_section_reset">
 				<div class="section_content_item col-12">
-					<h2>Basic Switches</h2>
-					<p>This showed me that I kind of hate dealing with sprites. But this is a good example of what can be done with JavaScript. Just</p>
-					<code>document.getElementById('the_id').what_you_want_to_change='whatever.'</code>
-					<p>pretty simply stuff.</p>
+					<h2>Basic Output</h2>
+					<script src="scripts/three_1.js"></script>
 					<div class="example">
-						<h3>Light Switch</h3>
-						<button  onclick="document.getElementById('light_on').id='light_off'" class="button button-flat">Light off</button>
-						<div id="light_off"></div>
-						<button  onclick="document.getElementById('light_off').id='light_on'" class="button button-flat">Light On</button>
-					</div>
-					<div class="example">
-						<h3>Removing Text</h3>
-						<p id="text_example_1">This is text, make me go away.</p>
-						<button onclick="document.getElementById('text_example_1').style.display='none'"  class="button button-flat">Hide Content</button>
-						<button onclick="document.getElementById('text_example_1').style.display='block'"  class="button button-flat">Revive Content</button>
-					</div>
-					<div class="example">
-						<h3>Removing Text With Function</h3>
-						<script>
-							function hideText2(){
-								document.getElementById('text_example_2').style.display='none';
-							}
-							function showText2(){
-								document.getElementById('text_example_2').style.display='block';
-							}
-						</script>
-						<p id="text_example_2">This is text, make me go away.</p>
-						<button onclick="hideText2()"  class="button button-flat">Hide Content</button>
-						<button onclick="showText2()"  class="button button-flat">Revive Content</button>
-					</div>
-					<div class="example">
-						<h3>Removing Text with External Script</h3>
-						<p id="text_example_3">This is text, make me go away.</p>
-						<button onclick="hideText3()"  class="button button-flat">Hide Content</button>
-						<button onclick="showText3()"  class="button button-flat">Revive Content</button>
+						<canvas id="canvas1"></canvas>
 					</div>
 				</div>
 			</div>
@@ -102,7 +67,6 @@ o<!DOCTYPE html>
 					</div>
 				</div>
 			</div>
-
 			<div class="section_container">
 				<div class="content_section_note" id="blink_red">
 					<h2>Skipped</h2>
@@ -126,7 +90,6 @@ o<!DOCTYPE html>
 				</div>
 			</div>
 			
-
 			<div class="section_container">
 				<div class="section_content_item col-12">
 					<h2>The beginning</h2>
@@ -163,6 +126,6 @@ o<!DOCTYPE html>
 <!-- Things I want to fixed
 	- Responsiveness
 	- Padding of the <a> tag in the nav bar is hacked at .84em, make this automatic
-										- Two div side by side in the content item doesn't work, destroys the webpage
-										- Let border appear on the left of content item without moving content inside
+												- Two div side by side in the content item doesn't work, destroys the webpage
+												- Let border appear on the left of content item without moving content inside
 	-->
