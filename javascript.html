@@ -1,0 +1,168 @@
+o<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="javascript.css">
+		<link rel="stylesheet" type="text/css" href="libraries/buttons.css">
+		<link rel="stylesheet" type="text/css" href="images/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="libraries/hint.css">
+		<title>JavaScript Page</title>
+		<meta name="name" content="content">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?LR-verbose&snipver=1&LiveTest=1"></' + 'script>')</script>
+		<script src="scripts/javascript.js"></script>
+	</head>
+	<body>
+		<img src="images/back.svg" alt="back_image" id="back_img">
+		<!-- Background Image -->
+		<header id="header" class="row">
+			<h1 style="margin-bottom: .2em;">JavaScript Example Page</h1>
+			<p style="margin: .2em 0em 1em 0em; font-size: 70%;" ><a href="www.github.com/herojeanpierre">
+				<span class="hint--right hint--bounce" aria-label="My github">By: Julien Jean-Pierre</span>
+			</a></p>
+		</header>
+		<nav class="">
+			<ul>
+				<li><a href="Simple_Document.html" title="">HTML</a></li>
+				<li><a href="css_document.html" title="">CSS</a></li>
+				<li><a href="#Self" title="">JavaScript</a></li>
+				<li><a href="SQL" title="">SQL</a></li>
+			</ul>
+		</nav>
+		<section>
+			<div class="content_container">
+				<div class="content_nav">
+					
+				</div>
+			</div>
+			<div class="section_container">
+				<div class="content_section_comment">
+					<h2>Overview</h2>
+					<p>This will start from the very basics and will progress to more and more advanced topics the further things move down.</p>
+				</div>
+			</div>
+			<div class="section_container" id="content_section_reset">
+				<div class="section_content_item col-12">
+					<h2>Basic Switches</h2>
+					<p>This showed me that I kind of hate dealing with sprites. But this is a good example of what can be done with JavaScript. Just</p>
+					<code>document.getElementById('the_id').what_you_want_to_change='whatever.'</code>
+					<p>pretty simply stuff.</p>
+					<div class="example">
+						<h3>Light Switch</h3>
+						<button  onclick="document.getElementById('light_on').id='light_off'" class="button button-flat">Light off</button>
+						<div id="light_off"></div>
+						<button  onclick="document.getElementById('light_off').id='light_on'" class="button button-flat">Light On</button>
+					</div>
+					<div class="example">
+						<h3>Removing Text</h3>
+						<p id="text_example_1">This is text, make me go away.</p>
+						<button onclick="document.getElementById('text_example_1').style.display='none'"  class="button button-flat">Hide Content</button>
+						<button onclick="document.getElementById('text_example_1').style.display='block'"  class="button button-flat">Revive Content</button>
+					</div>
+					<div class="example">
+						<h3>Removing Text With Function</h3>
+						<script>
+							function hideText2(){
+								document.getElementById('text_example_2').style.display='none';
+							}
+							function showText2(){
+								document.getElementById('text_example_2').style.display='block';
+							}
+						</script>
+						<p id="text_example_2">This is text, make me go away.</p>
+						<button onclick="hideText2()"  class="button button-flat">Hide Content</button>
+						<button onclick="showText2()"  class="button button-flat">Revive Content</button>
+					</div>
+					<div class="example">
+						<h3>Removing Text with External Script</h3>
+						<p id="text_example_3">This is text, make me go away.</p>
+						<button onclick="hideText3()"  class="button button-flat">Hide Content</button>
+						<button onclick="showText3()"  class="button button-flat">Revive Content</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="section_container">
+				<div class="content_section_comment">
+					<h2>Types of Output</h2>
+					<ul>
+						<li>Writing into an HTML element, using <strong>innerHTML</strong>.</li>
+						<li>Writing into the HTML output using <strong>document.write()</strong>.</li>
+						<li>Writing into an alert box, using <strong>window.alert()</strong>.</li>
+						<li>Writing into the browser console, using <strong>console.log()</strong>.</li>
+					</ul>
+					<div class="example">
+						<p style="padding: 9px 0px 5px 0px; margin: 0px;" id="text_example_4">1. Inner HTML</p>
+						<button onclick="innerHTMLButton('You changed the inner HTML of this tag')" class="button button-flat">Click to log.</button>
+						<br><br>
+						<script>document.write("2. This was written with document.write()")</script>
+						<p style="padding: 9px 0px 5px 0px; margin: 0px;">3. Alert</p>
+						<button onclick="alertButton('You just pressed the alert button.')" class="button button-flat">Click for alert.</button>
+						<p style="padding: 9px 0px 5px 0px; margin: 0px;">4. Log in Console. (Ctrl+Shift+i then navigate to Console)</p>
+						<button onclick="logButton('You just pressed the log button')" class="button button-flat">Click to log.</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="section_container">
+				<div class="content_section_note" id="blink_red">
+					<h2>Skipped</h2>
+					<ul>
+						<li>Basic Syntax</li>
+						<li>JavaScript is case sensitive</li>
+						<li>Camel Case</li>
+						<li>Expression</li>
+						<li>Variables</li>
+						<li>Statements</li>
+						<li>Whitespace</li>
+						<li>Basic KeyWords</li>
+						<li>Semicolons</li>
+						<li>Comments</li>
+						<li>Operators</li>
+						<li>Arithmetic</li>
+						<li>Assignment</li>
+						<li>Data Types</li>
+						<li>Functions</li>
+					</ul>
+				</div>
+			</div>
+			
+
+			<div class="section_container">
+				<div class="section_content_item col-12">
+					<h2>The beginning</h2>
+					<p>This is some content.</p>
+				</div>
+			</div>
+			<div class="section_container">
+				<div class="section_content_item col-12">
+					<h2>The beginning</h2>
+					<p>This is some content.</p>
+				</div>
+			</div>
+			<div class="section_container">
+				<div class="section_content_item col-12">
+					<h2>The beginning</h2>
+					<p>This is some content.</p>
+				</div>
+			</div>
+			<div class="section_container">
+				<div class="section_content_item col-12">
+					<h2>The beginning</h2>
+					<p>This is some content.</p>
+				</div>
+			</div>
+		</section>
+		<footer>
+			
+			<div class="footer_container">
+				<p>&copy 2017 Julien Jean-Pierre</p>
+			</div>
+		</footer>
+	</body>
+</html>
+<!-- Things I want to fixed
+	- Responsiveness
+	- Padding of the <a> tag in the nav bar is hacked at .84em, make this automatic
+										- Two div side by side in the content item doesn't work, destroys the webpage
+										- Let border appear on the left of content item without moving content inside
+	-->
